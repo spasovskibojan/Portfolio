@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spasovski</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <ul class="nav-left">
+            <li><a href="index.html">Bojan Spasovski</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fas fa-bars"></i></button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="biography.html">Biography</a>
+                <a href="work.html">Work</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="space" id="top"> </div>
+    <section class="main-info">
+        <div class="main-left">
+            <img src="images/Profilna.jpg" alt="Profile" width="100%">
+            <p>Bojan Spasovski</p>
+            <p>Student</p>
+            <p><a href="https://finki.ukim.mk/mk" target="_blank"><abbr title="FINKI">Faculty of Computer Science and Engineering</abbr></a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/bojan.spasovski04?locale=mk_MK" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/BojanSpaso3837" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/spasovski_bojan/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/bojan-spasovski-a3a403293/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/spasovskibojan" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="biography">
+                <h1>About Me</h1>
+                <p>Bojan Spasovski is aspiring Faculty of Computer Science and Engineering student,
+                    eager to learn about data structures, algorithms, databases, AI, and software development.
+                    Driven to grow and contribute to innovative projects and impactful solutions.</p>
+            </div>
+            <section class="main-right-bottom">
+                <div class="interests">
+                    <h1>Interests</h1>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Data Structures & Algorithms</li>
+                    </ul>
+                </div>
+                <div class="education">
+                    <h1>Education</h1>
+                    <ul>
+                        <li>
+                            <p class="Education-Head">Undergraduate, 2023-</p>
+                            <p>Faculty of Computer Science and Engineering, Skopje</p>
+                        </li>
+                        <li>
+                            <p class="Education-Head">High School Graduate, 2019-2023</p>
+                            <p>Vanco Prke, Vinica</p>
+                        </li>
+                        <li>
+                            <p class="Education-Head">Primary School Graduate, 2010-2019</p>
+                            <p>Slavco Stojmenski, Vinica</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            </div>
+    </section>
+
+    <section class="skills">
+        <h1>Skills</h1>
+        <div class="skillList">
+            <div class="cpp">
+                <i class="fas fa-code"></i>
+                <h2>C++</h2>
+            </div>
+            <div class="js">
+                <i class="fab fa-js"></i>
+                <h2>Javascript</h2>
+            </div>
+            <div class="git">
+                <i class="fab fa-git"></i>
+                <h2>Git</h2>
+            </div>
+            <div class="wp">
+                <i class="fab fa-wordpress"></i>
+                <h2>WordPress</h2>
+            </div>
+            <div class="react">
+                <i class="fab fa-react"></i>
+                <h2>React</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <section class="address">
+        <ul>
+            <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>
+                ul. Bel Kamen bb <br>
+                2310 Vinica <br>
+                    Republic of Macedonia
+                </span>
+            </li>
+            <li>
+                <i class="far fa-clock"></i>
+                <span>
+                    Available every day <br>
+                    10:00 - 18:00
+                </span>
+            </li>
+        </ul>
+        </section>
+    <a id="toTopArrow" href="#top"><i class="fas fa-chevron-up fa-2x"></i></a>
+    <footer>
+        <p>&copy; 2024 Bojan Spasovski. All rights reserved.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
