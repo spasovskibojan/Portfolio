@@ -445,11 +445,6 @@ footer p {
     color: black;
     text-decoration: underline;
 }
-.projects-sites img{
-    border-radius: 30px;
-    border: 3px solid darkgray;
-}
-
 
 .comp{
     display: flex;
@@ -559,5 +554,161 @@ footer p {
 @media(max-width: 475px){
     .myInfo{
         width: 100%;
+    }
+}
+
+/* Work single item page */
+.portfolio-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.quiz-text span#moreDetailsProjects{
+    color: #6e6e6e;
+}
+.quiz-text span#moreDetailsProjects:hover{
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+}
+/* Project overview section */
+.project-overview {
+    margin: 20px 0;
+}
+
+.project-overview h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.project-overview p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Key Features Section */
+.project-overview h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.project-overview ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-overview ul li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.project-overview ul li strong {
+    color: #0066cc;
+}
+
+.page-overview {
+    margin-top: 40px;
+}
+
+.page {
+    margin-bottom: 30px;
+}
+
+.page h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.page p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.page .page-image {
+    width: 100%;
+    max-width: 650px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.page .page-image:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-container .project-overview img{
+    display: block;
+    margin: 0 auto;
+    width: 750px;
+}
+#goBackBtn{
+    background-color: rgba(171, 171, 171, 0.42);
+    display: inline-block;
+    padding: 10px 15px;
+}
+#goBackBtn:hover{
+    background-color: rgb(49, 49, 49);
+    color: white;
+    cursor: pointer;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .portfolio-container .project-overview img{
+        width: 400px;
+    }
+    .portfolio-container {
+        padding: 20px;
+    }
+
+    .project-overview h1 {
+        font-size: 2rem;
+    }
+
+    .project-overview h2 {
+        font-size: 1.6rem;
+    }
+
+    .project-overview ul li {
+        font-size: 1rem;
+    }
+
+    .page h3 {
+        font-size: 1.35rem;
+    }
+
+    .page p {
+        font-size: 1rem;
+    }
+
+    .page .page-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .portfolio-container .project-overview img{
+        width: 300px;
     }
 }
