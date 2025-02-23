@@ -64,7 +64,7 @@ function loadMinistryWebsite() {
             <section class="project-overview">
                 <h1>Ministry of Finance of the Republic of Macedonia - Website Development</h1>
                 <p>I designed and developed a fully responsive website for the Ministry of Finance of the Republic of Macedonia, leveraging React for the frontend and Firebase for hosting and authentication. The website offers a comprehensive user experience with multilingual support (Macedonian and English), enabling users to easily access critical information about the ministry, including news, services, and job opportunities.</p>
-                <img src="/images/projects/ministry1.png" alt="">
+                <img src="images/projects/ministry1.png" alt="">
                 <h2>Key Features</h2>
                 <ul>
                     <li><strong>Fully Responsive Design:</strong> The website is designed to work seamlessly across devices of all sizes, ensuring an optimal experience for users on mobile, tablet, and desktop.</li>
@@ -80,7 +80,7 @@ function loadMinistryWebsite() {
                 <h2>Pages Overview</h2>
                 <div class="page">
                     <h3>Home Page</h3>
-                    <img src="/images/projects/m1.png" alt="Home Page Screenshot" class="page-image">
+                    <img src="images/projects/m1.png" alt="Home Page Screenshot" class="page-image">
                     <p>The Home page provides a comprehensive introduction to the Ministry of Finance of the Republic of Macedonia. It features essential information about the ministry, including its mission, vision, and services. The page is designed to engage users with quick access to key resources and the latest news.</p>
                 </div>
                 <div class="page">
