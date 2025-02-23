@@ -50,7 +50,6 @@ if (location.href == 'contact.html') {
     });
 }
 
-
 // Work script
 function loadMinistryWebsite() {
     var firstStatePage = document.getElementById('workPageContainer');
@@ -108,6 +107,53 @@ function loadMinistryWebsite() {
         </div>
     `;
 }
+
+function loadQuizWebsite() {
+    var firstStatePage = document.getElementById('workPageContainer');
+    firstStatePage.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    var singleProject = document.getElementById('singleProjectPart');
+    singleProject.innerHTML = `
+        <div class="portfolio-container">
+            <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
+            <section class="project-overview">
+                <h1>Educational Quiz - Interactive Learning Platform</h1>
+                <p>I designed and developed an interactive and engaging educational quiz application, aimed at providing users with a fun and effective way to test their knowledge. The project is built using modern web technologies to ensure a seamless user experience with a dynamic and visually appealing interface.</p>
+                <img src="images/projects/q1.png" alt="Quiz Image">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Interactive Quiz System:</strong> Users can participate in multiple-choice quizzes across various subjects, enhancing their learning experience.</li>
+                    <li><strong>Real-Time Score Tracking:</strong> The app dynamically updates scores, allowing users to monitor their progress instantly.</li>
+                    <li><strong>Engaging UI and UX:</strong> Designed with a clean and modern interface to ensure a user-friendly experience.</li>
+                    <li><strong>Category-Based Questions:</strong> Users can select from different categories, making it a customizable learning tool.</li>
+                    <li><strong>Responsive Design:</strong> Optimized for all devices, ensuring smooth usability on desktop, tablet, and mobile screens.</li>
+                </ul>
+                <p>This project showcases my ability to create interactive and engaging web applications using JavaScript, HTML, and CSS. The quiz functionality, along with a visually appealing design, demonstrates my expertise in front-end development and user experience design.</p>
+            </section>
+            
+            <section class="page-overview">
+                <h2>Pages Overview</h2>
+                <div class="page">
+                    <h3>Home Page</h3>
+                    <p>The Home page introduces users to the quiz platform, allowing them to choose categories and start their learning journey immediately.</p>
+                </div>
+                <div class="page">
+                    <h3>Quiz Page</h3>
+                    <img src="images/projects/quiz1.png" alt="Quiz Page Screenshot" class="page-image">
+                    <p>The Quiz page presents users with multiple-choice questions, allowing them to select answers and track their scores dynamically.</p>
+                </div>
+                <div class="page">
+                    <h3>Results Page</h3>
+                    <img src="images/projects/quiz2.png" alt="Results Page Screenshot" class="page-image">
+                    <p>The Results page displays the user's final score, encouraging them to improve and retake quizzes for better learning outcomes. Also there is an option to see the correct answers on each question,</p>
+                </div>
+                <a target="_blank" href="https://spasovskibojan.github.io/Edukativen-Kviz/">Live Demo of the project</a>
+            </section>
+        </div>
+    `;
+}
+
 
 function goToWorkPage() {
     location.reload()

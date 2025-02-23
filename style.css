@@ -572,10 +572,10 @@ footer p {
 .portfolio-container:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
-.quiz-text span#moreDetailsProjects{
+.quiz-text span.moreDetailsProjects{
     color: #6e6e6e;
 }
-.quiz-text span#moreDetailsProjects:hover{
+.quiz-text span.moreDetailsProjects:hover{
     text-decoration: underline;
     color: black;
     cursor: pointer;
