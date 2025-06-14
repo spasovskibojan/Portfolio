@@ -9,6 +9,7 @@ function closeNavbarOnClickOutside(event) {
         dropdownContent.style.display = 'none';
     }
 }
+
 document.addEventListener('click', closeNavbarOnClickOutside);
 const dropdownButton = dropdown.querySelector('.dropbtn');
 dropdownButton.addEventListener('click', function (event) {
@@ -103,6 +104,69 @@ function loadMinistryWebsite() {
                     <p>The Login page allows users to sign in or sign up using Firebase Authentication. This page ensures secure access to protected resources, including job listings and profile management.</p>
                 </div>
                 <a target="_blank" href="https://ministryoffinancemk.web.app/">Live Demo of the project</a>
+            </section>
+        </div>
+    `;
+}
+
+function loadTeamToDo() {
+    var firstStatePage = document.getElementById('workPageContainer');
+    firstStatePage.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    var singleProject = document.getElementById('singleProjectPart');
+    singleProject.innerHTML = `
+        <div class="portfolio-container">
+            <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
+            <section class="project-overview">
+                <h1>Team ToDo - Task Management Solution</h1>
+                <p>I developed a robust Team ToDo application using C# .NET Framework to streamline task management for teams. This project combines a user-friendly interface with powerful backend functionality, enabling efficient collaboration and task tracking in a professional environment.</p>
+                <img src="images/projects/Team%20Todo/3.png" alt="Team ToDo Main Interface">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Task Management:</strong> Allows users to create, assign, and track tasks with customizable priorities and deadlines.</li>
+                    <li><strong>User Authentication:</strong> Secure login system to ensure only authorized team members access the app.</li>
+                    <li><strong>Real-Time Updates:</strong> Dynamic task status updates for seamless team coordination.</li>
+                    <li><strong>Admin Dashboard:</strong> Comprehensive statistics and user management for administrators.</li>
+                </ul>
+                <p>This project highlights my skills in full-stack development, including C# .NET, database design, and UI/UX implementation. 
+                There is multilevel hierarchy authorization and each role can do different things, such as task creation for employees, team management and task delegation for team leaders, and full administrative control for admins. 
+                Also I have implemented Datatables to offer more options for tasks like searching, pagination, sorting and filtering the number of tasks in each page.
+                It demonstrates my ability to build practical, scalable solutions for team productivity.</p>
+            </section>
+            
+            <section class="page-overview">
+                <div class="page">
+                    <h3>User Guide/ Home Page</h3>
+                    <img src="images/projects/Team%20Todo/1.png" alt="User Guide Screenshot" class="page-image">
+                    <img src="images/projects/Team%20Todo/2.png" alt="User Guide Screenshot" class="page-image">
+                    <p>The User Guide page provides instructions for both users and administrators to maximize app usage.</p>
+                </div>
+                <div class="page">
+                    <h3>Teams Management</h3>
+                    <img src="images/projects/Team%20Todo/4.png" alt="Teams Management Screenshot" class="page-image">
+                    <p>The Teams Management page enables organization of tasks by teams, with options to view statistics and manage team-specific workflows.</p>
+                </div>
+                <div class="page">
+                    <h3>Task Creation Page</h3>
+                    <img src="images/projects/Team%20Todo/8.png" alt="Task Creation Screenshot" style="width: 300px !important; height: 330px !important;" class="page-image">
+                    <p>The Task Creation page enables users to add new tasks with details like priority, deadline, and assignees.</p>
+                </div>
+                <div class="page">
+                    <h3>Admin Dashboard</h3>
+                    <img src="images/projects/Team%20Todo/6.png" alt="Admin Dashboard Screenshot" class="page-image">
+                    <p>The Admin Dashboard offers statistics and controls for managing users and task progress.</p>
+                </div>
+                <div class="page">
+                    <h3>User Role Management</h3>
+                    <img src="images/projects/Team%20Todo/7.png" alt="Admin Role Assignment Screenshot" class="page-image">
+                    <p>The User Roles page allows administrators to promote users to Administrator, Team Leader or Employee.</p>
+                </div>
+                
+                <div class="code-look page">
+                    <p>Today, there is not a possibility to view the app online, but you can see the github repository and install it locally to test the functionalities and use it for your own purposes.</p>
+                    <a target="_blank" href="https://github.com/spasovskibojan/Team-ToDo">View on GitHub</a>
+                </div>
             </section>
         </div>
     `;
