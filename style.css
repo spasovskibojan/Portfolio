@@ -469,6 +469,8 @@ footer p {
     font-weight: 500;
     margin: 0;
     color: #313131;
+    text-transform: uppercase;
+    margin-bottom: 80px;
 }
 
 .projects-sites h3 {
