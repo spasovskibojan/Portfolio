@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Spasovski</title>
@@ -8,87 +9,119 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-<body>
-<nav class="navbar" id="navbar">
-    <ul class="nav-left">
-        <li><a href="index.html">Bojan Spasovski</a></li>
-    </ul>
-    <ul class="nav-right">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="biography.html">Biography</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="dropdown">
-        <button class="dropbtn"><i class="fas fa-bars"></i></button>
-        <div class="dropdown-content">
-            <a href="index.html">Home</a>
-            <a href="biography.html">Biography</a>
-            <a href="work.html">Work</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-</nav>
 
-<div class="space"> </div>
-<div id="workPageContainer">
-    <section class="container-companies">
-        <div class="projects">
-            <h1>Projects</h1>
-            <div class="projects-sites">
-                <img src="images/projects/Team%20Todo/3.png" width="500px" alt="teamToDo" id="teamToDo">
-                <div class="quiz-text">
-                    <h3>Team ToDo</h3>
-                    <p>I developed a Team ToDo application using C# .NET Framework, designed to help teams manage tasks efficiently.
-                        The app allows users to create, assign, and track tasks with deadlines, featuring user authentication and a local database for task storage.
-                        It showcases my skills in back-end development, database integration, and team collaboration tools, providing a practical solution for task organization.
-                    </p>
-                    <span class="moreDetailsProjects" onclick="loadTeamToDo()">Detailed info about the project</span>
-                </div>
+<body>
+    <nav class="navbar" id="navbar">
+        <ul class="nav-left">
+            <li><a href="index.html">Bojan Spasovski</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fas fa-bars"></i></button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="biography.html">Biography</a>
+                <a href="work.html">Work</a>
+                <a href="contact.html">Contact</a>
             </div>
-            <hr>
-            <div class="projects-sites">
-                <div class="quiz-text">
-                    <h3>Ministry of Finance Website</h3>
-                    <p>
-                        I created a fully responsive website for Ministry of Finance of Republic of Macedonia using React and Firebase.
-                        The site showcases the info about the ministry as well as the latest news. It allows you to choose which language you want to use (mk/en).
-                        Also there is authentication possibility (you can sign in/up) and add new job listings in the job listings part as well as seeing the
-                        listings that others have created.
-                    </p>
-                    <span class="moreDetailsProjects" onclick="loadMinistryWebsite()">Detailed info about the project</span>
-                </div>
-                <img src="images/projects/ministry1.png" alt="quiz" width="450" id="ministry">
-            </div>
-            <hr>
-            <div class="projects-sites">
-                <img src="images/quiz.jpg" alt="quiz" width="450" id="quiz">
-                <div class="quiz-text">
-                    <h3>Educational Quiz</h3>
-                    <p>I developed an engaging Educational Quiz website focused on natural science subjects like Geography, Biology, Maths, Chemistry, and Physics.
-                        Users can enter their name to personalize their experience and attempt a 20-question quiz. At the end, they receive an award page displaying their
-                        score and the option to review the correct answers. This project showcases my skills in front-end web development, user experience design, and
-                        educational technology, providing a valuable tool for students to enhance their knowledge in a fun and interactive way.</p>
-                    <span class="moreDetailsProjects" onclick="loadQuizWebsite()">Detailed info about the project</span>
-                </div>
-            </div>
-            <hr>
         </div>
-    </section>
-    <div class="companies">
-        <h1>Worked with</h1>
-        <div class="comp">
-            <img src="images/finqup.png" alt="" width="70" height="70" style="margin: 15px;" >
-            <img src="images/oneInside.png" alt="" width="100" >
-            <img src="images/vps.png" alt="" width="100">
+    </nav>
+
+    <div class="space"> </div>
+    <div id="workPageContainer">
+        <section class="container-companies">
+            <div class="projects">
+                <h1>Projects</h1>
+                <div class="projects-sites">
+                    <img src="images/projects/AI_Resume_Platform/1.png" width="500px" height="340px"
+                        alt="AI Resume Platform" id="aiResumePlatform">
+                    <div class="quiz-text">
+                        <h3>AI Resume & Career Platform</h3>
+                        <p>I developed an AI-powered Resume & Career Platform using Python and Streamlit to
+                            revolutionize the job application process through intelligent automation.
+                            This application combines a comprehensive Resume Analyzer with an AI Career Coach,
+                            leveraging Meta's Llama 3.3 70B model via Groq API for ultra-fast inference.
+                            The platform enables users to upload their resume alongside a job description to receive
+                            instant AI-powered analysis including match scores, keyword comparisons,
+                            and personalized career guidance with interview preparation questions.
+                        </p>
+                        <span class="moreDetailsProjects" onclick="loadAIResumePlatform()">Detailed info about the
+                            project</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="projects-sites">
+                    <img src="images/projects/Team%20Todo/3.png" width="500px" alt="teamToDo" id="teamToDo">
+                    <div class="quiz-text">
+                        <h3>Team ToDo</h3>
+                        <p>I developed a Team ToDo application using C# .NET Framework, designed to help teams manage
+                            tasks efficiently.
+                            The app allows users to create, assign, and track tasks with deadlines, featuring user
+                            authentication and a local database for task storage.
+                            It showcases my skills in back-end development, database integration, and team collaboration
+                            tools, providing a practical solution for task organization.
+                        </p>
+                        <span class="moreDetailsProjects" onclick="loadTeamToDo()">Detailed info about the
+                            project</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="projects-sites">
+                    <div class="quiz-text">
+                        <h3>Ministry of Finance Website</h3>
+                        <p>
+                            I created a fully responsive website for Ministry of Finance of Republic of Macedonia using
+                            React and Firebase.
+                            The site showcases the info about the ministry as well as the latest news. It allows you to
+                            choose which language you want to use (mk/en).
+                            Also there is authentication possibility (you can sign in/up) and add new job listings in
+                            the job listings part as well as seeing the
+                            listings that others have created.
+                        </p>
+                        <span class="moreDetailsProjects" onclick="loadMinistryWebsite()">Detailed info about the
+                            project</span>
+                    </div>
+                    <img src="images/projects/ministry1.png" alt="quiz" width="450" id="ministry">
+                </div>
+                <hr>
+                <div class="projects-sites">
+                    <img src="images/quiz.jpg" alt="quiz" width="450" id="quiz">
+                    <div class="quiz-text">
+                        <h3>Educational Quiz</h3>
+                        <p>I developed an engaging Educational Quiz website focused on natural science subjects like
+                            Geography, Biology, Maths, Chemistry, and Physics.
+                            Users can enter their name to personalize their experience and attempt a 20-question quiz.
+                            At the end, they receive an award page displaying their
+                            score and the option to review the correct answers. This project showcases my skills in
+                            front-end web development, user experience design, and
+                            educational technology, providing a valuable tool for students to enhance their knowledge in
+                            a fun and interactive way.</p>
+                        <span class="moreDetailsProjects" onclick="loadQuizWebsite()">Detailed info about the
+                            project</span>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </section>
+        <div class="companies">
+            <h1>Worked with</h1>
+            <div class="comp">
+                <img src="images/finqup.png" alt="" width="70" height="70" style="margin: 15px;">
+                <img src="images/oneInside.png" alt="" width="100">
+                <img src="images/vps.png" alt="" width="100">
+            </div>
         </div>
     </div>
-</div>
-<div id="singleProjectPart"></div>
-<a id="toTopArrow" href="#top"><i class="fas fa-chevron-up fa-2x"></i></a>
-<footer>
-    <p>&copy; 2024 Bojan Spasovski. All rights reserved.</p>
-</footer>
+    <div id="singleProjectPart"></div>
+    <a id="toTopArrow" href="#top"><i class="fas fa-chevron-up fa-2x"></i></a>
+    <footer>
+        <p>&copy; 2024 Bojan Spasovski. All rights reserved.</p>
+    </footer>
 </body>
 <script src="script.js"></script>
 

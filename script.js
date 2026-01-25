@@ -109,7 +109,68 @@ function loadMinistryWebsite() {
     `;
 }
 
+function loadAIResumePlatform() {
+    var firstStatePage = document.getElementById('workPageContainer');
+    firstStatePage.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    var singleProject = document.getElementById('singleProjectPart');
+    singleProject.innerHTML = `
+        <div class="portfolio-container">
+            <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
+            <section class="project-overview">
+                <h1>AI Resume & Career Platform</h1>
+                <p>An AI-powered platform using Python and Streamlit that revolutionizes job applications through intelligent automation. Combines Resume Analyzer and AI Career Coach features, leveraging Meta's Llama 3.3 70B via Groq API for ultra-fast inference.</p>
+                <img src="images/projects/AI_Resume_Platform/2.png" alt="AI Resume Platform Main Interface" style="width:50%; height:40%;">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Resume Analysis:</strong> AI-powered resume-to-job matching with detailed scoring and keyword analysis.</li>
+                    <li><strong>Career Coaching:</strong> Personalized career path recommendations and skills development guidance.</li>
+                    <li><strong>Interview Preparation:</strong> Auto-generated technical and behavioral interview questions tailored to your profile.</li>
+                </ul>
+                <p>This project shows my expertise in AI integration, NLP, PDF parsing with PyPDF2, and building scalable Streamlit applications with production-ready resource management.</p>
+            </section>
+            
+            <section class="page-overview">
+                <h2>Features Overview</h2>
+                <div class="page">
+                    <h3>AI-Powered Match Score & Analysis</h3>
+                    <img src="images/projects/AI_Resume_Platform/3.png" alt="Match Score Results" class="page-image" style="width:50%; height:40%;">
+                    <p>Comprehensive match score with detailed AI feedback on strengths, weaknesses, and specific optimization recommendations.</p>
+                </div>
+                <div class="page">
+                    <h3>Keyword Analysis</h3>
+                    <img src="images/projects/AI_Resume_Platform/4.png" alt="Keyword Comparison" class="page-image" style="width:50%; height:40%;">
+                    <p>Identifies found and missing skills from job descriptions, helping users optimize keyword incorporation.</p>
+                </div>
+                <div class="page">
+                    <h3>Interview Preparation Questions</h3>
+                    <img src="images/projects/AI_Resume_Platform/6.png" alt="Interview Questions" class="page-image" style="width:50%; height:40%;">
+                    <p>Customized technical and behavioral interview questions based on resume and job description analysis.</p>
+                </div>
+                <div class="page">
+                    <h3>AI Career Coach</h3>
+                    <img src="images/projects/AI_Resume_Platform/8.png" alt="Career Suggestions" class="page-image" style="width:50%; height:60%;">
+                    <p>Personalized career path suggestions with top marketable skills identification and actionable development steps.</p>
+                </div>
+                
+                <div class="code-look page">
+                    <h3>Technology Stack</h3>
+                    <ul>
+                        <li><strong>Frontend:</strong> Streamlit</li>
+                        <li><strong>AI Model:</strong> Meta's Llama 3.3 70B via Groq API</li>
+                        <li><strong>NLP & Processing:</strong> PyPDF2, custom prompt engineering</li>
+                        <li><strong>Resource Management:</strong> Smart rate limiting with daily tracking</li>
+                    </ul>
+                    <a target="_blank" href="https://resume-career-platform.streamlit.app/">Live Demo of the project</a>
+                </div>
+            </section>
+        </div>
+    `;
+}
+
 function loadTeamToDo() {
+
     var firstStatePage = document.getElementById('workPageContainer');
     firstStatePage.innerHTML = "";
     window.scrollTo(0, 0);

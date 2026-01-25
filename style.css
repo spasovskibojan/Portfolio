@@ -40,7 +40,8 @@ body {
 .navbar ul li a {
     color: white;
     text-decoration: none;
-    display: block; /* see this and next line*/
+    display: block;
+    /* see this and next line*/
     padding: 8px 16px;
 }
 
@@ -440,6 +441,7 @@ footer p {
     margin: 50px;
     gap: 20px;
     justify-content: center;
+    align-items: center;
 }
 
 .quiz-text {
@@ -522,7 +524,9 @@ footer p {
 }
 
 @media (max-width: 1250px) {
-    .quiz-text, .container-companies {
+
+    .quiz-text,
+    .container-companies {
         width: 100%;
     }
 }
@@ -554,7 +558,8 @@ footer p {
     .bio {
         width: 100%;
         margin: 0 2vh;
-        display: flex; /* try*/
+        display: flex;
+        /* try*/
         flex-wrap: wrap;
     }
 
