@@ -224,10 +224,7 @@ function loadTeamToDo() {
                     <p>The User Roles page allows administrators to promote users to Administrator, Team Leader or Employee.</p>
                 </div>
                 
-                <div class="code-look page">
-                    <p>Today, there is not a possibility to view the app online, but you can see the github repository and install it locally to test the functionalities and use it for your own purposes.</p>
-                    <a target="_blank" href="https://github.com/spasovskibojan/Team-ToDo">View on GitHub</a>
-                </div>
+                <a target="_blank" href="http://team-todo.somee.com/">Live Demo of the project</a>
             </section>
         </div>
     `;
