@@ -134,7 +134,7 @@ function loadMinistryWebsite() {
             <section class="project-overview">
                 <h1>Ministry of Finance of the Republic of Macedonia - Website Development</h1>
                 <p>I designed and developed a fully responsive website for the Ministry of Finance of the Republic of Macedonia, leveraging React for the frontend and Firebase for hosting and authentication. The website offers a comprehensive user experience with multilingual support (Macedonian and English), enabling users to easily access critical information about the ministry, including news, services, and job opportunities.</p>
-                <img src="images/projects/ministry1.png" alt="">
+                <img src="images/projects/ministry/ministry1.png" alt="">
                 <h2>Key Features</h2>
                 <ul>
                     <li><strong>Fully Responsive Design:</strong> The website is designed to work seamlessly across devices of all sizes, ensuring an optimal experience for users on mobile, tablet, and desktop.</li>
@@ -150,27 +150,27 @@ function loadMinistryWebsite() {
                 <h2>Pages Overview</h2>
                 <div class="page">
                     <h3>Home Page</h3>
-                    <img src="images/projects/m1.png" alt="Home Page Screenshot" class="page-image">
+                    <img src="images/projects/ministry/m1.png" alt="Home Page Screenshot" class="page-image">
                     <p>The Home page provides a comprehensive introduction to the Ministry of Finance of the Republic of Macedonia. It features essential information about the ministry, including its mission, vision, and services. The page is designed to engage users with quick access to key resources and the latest news.</p>
                 </div>
                 <div class="page">
                     <h3>News Page</h3>
-                    <img src="images/projects/ministry2.png" alt="News Page Screenshot" class="page-image">
+                    <img src="images/projects/ministry/ministry2.png" alt="News Page Screenshot" class="page-image">
                     <p>The News page displays the latest updates and important news articles related to the Ministry of Finance. It is dynamically updated via Firebase, ensuring that users always have access to the most current information.</p>
                 </div>
                 <div class="page">
                     <h3>Services Page</h3>
-                    <img src="images/projects/ministry3.png" alt="Services Page Screenshot" class="page-image">
+                    <img src="images/projects/ministry/ministry3.png" alt="Services Page Screenshot" class="page-image">
                     <p>The Services page provides a detailed overview of the various services offered by the Ministry of Finance. Users can explore a wide range of financial services available to citizens and businesses, helping them navigate important processes more easily.</p>
                 </div>
                 <div class="page">
                     <h3>Job Listings Page</h3>
-                    <img src="images/projects/ministry4.png" alt="Job Listings Page Screenshot" class="page-image">
+                    <img src="images/projects/ministry/ministry4.png" alt="Job Listings Page Screenshot" class="page-image">
                     <p>The Job Listings page showcases available job opportunities within the Ministry of Finance. Authenticated users can view, add, and manage job listings, streamlining the recruitment process. The integration of Firebase ensures real-time updates to the job listings.</p>
                 </div>
                 <div class="page">
                     <h3>Login Page</h3>
-                    <img src="images/projects/ministry5.png" alt="Login Page Screenshot" class="page-image">
+                    <img src="images/projects/ministry/ministry5.png" alt="Login Page Screenshot" class="page-image">
                     <p>The Login page allows users to sign in or sign up using Firebase Authentication. This page ensures secure access to protected resources, including job listings and profile management.</p>
                 </div>
                 <a target="_blank" href="https://ministryoffinancemk.web.app/">Live Demo of the project</a>
@@ -316,7 +316,7 @@ function loadQuizWebsite() {
             <section class="project-overview">
                 <h1>Educational Quiz - Interactive Learning Platform</h1>
                 <p>I designed and developed an interactive and engaging educational quiz application, aimed at providing users with a fun and effective way to test their knowledge. The project is built using modern web technologies to ensure a seamless user experience with a dynamic and visually appealing interface.</p>
-                <img src="images/projects/q1.png" alt="Quiz Image">
+                <img src="images/projects/quiz/q1.png" alt="Quiz Image">
                 <h2>Key Features</h2>
                 <ul>
                     <li><strong>Interactive Quiz System:</strong> Users can participate in multiple-choice quizzes across various subjects, enhancing their learning experience.</li>
@@ -336,12 +336,12 @@ function loadQuizWebsite() {
                 </div>
                 <div class="page">
                     <h3>Quiz Page</h3>
-                    <img src="images/projects/quiz1.png" alt="Quiz Page Screenshot" class="page-image">
+                    <img src="images/projects/quiz/quiz1.png" alt="Quiz Page Screenshot" class="page-image">
                     <p>The Quiz page presents users with multiple-choice questions, allowing them to select answers and track their scores dynamically.</p>
                 </div>
                 <div class="page">
                     <h3>Results Page</h3>
-                    <img src="images/projects/quiz2.png" alt="Results Page Screenshot" class="page-image">
+                    <img src="images/projects/quiz/quiz2.png" alt="Results Page Screenshot" class="page-image">
                     <p>The Results page displays the user's final score, encouraging them to improve and retake quizzes for better learning outcomes. Also there is an option to see the correct answers on each question,</p>
                 </div>
                 <a target="_blank" href="https://spasovskibojan.github.io/Edukativen-Kviz/">Live Demo of the project</a>
@@ -385,4 +385,10 @@ if (toggleBtnBottom) {
         // Smooth scroll back to the top button
         toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
+}
+
+// Set current year in footer
+const yearSpan = document.getElementById('currentYear');
+if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
 }

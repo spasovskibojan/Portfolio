@@ -519,17 +519,24 @@ i.fab {
 
 .address ul li {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    /* Vertically center content */
+    margin-bottom: 30px;
+    /* Space between rows */
 }
 
 .address ul li span {
-    margin: 20px 8px 10px 8px;
+    margin-left: 15px;
+    /* Space between icon and text */
+    font-size: 18px;
 }
 
 .address i {
-    font-size: 50px;
-    margin: 20px;
-    height: 100px;
+    font-size: 32px;
+    width: 40px;
+    /* Fixed width for alignment */
+    text-align: center;
+    color: #313131;
 }
 
 .address iframe#map {
