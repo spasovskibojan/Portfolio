@@ -362,7 +362,7 @@ function loadBioSecure() {
             <section class="project-overview">
                 <h1>BioSecure - Iris Recognition System</h1>
                 <p>BioSecure is an advanced iris recognition system built with Python and OpenCV that performs high-accuracy biometric authentication. The system uses a multi-stage pipeline involving CLAHE preprocessing, Hough Circle segmentation, and a hybrid feature extraction method (Gabor Filters, LBP, SURF). Deployed on Hugging Face Spaces via Docker, the Flask backend calculates real-time cosine similarity scores for precise identity matching. The application includes a responsive web interface and generates automated PDF analysis reports, offering a complete solution for secure identity verification.</p>
-                <img src="images/projects/biosecure/1.png" alt="BioSecure Main Interface" style="background-color: #ccc; min-height: 300px; width: 100%; display: flex; align-items: center; justify-content: center; object-fit: cover;">
+                <img src="images/projects/BioSecure/1.png" alt="BioSecure Main Interface" style="background-color: #ccc; min-height: 300px; width: 100%; display: flex; align-items: center; justify-content: center; object-fit: cover;">
                 <h2>Key Technical Highlights</h2>
                 <ul>
                     <li><strong>Advanced Computer Vision:</strong> Utilizes Hough Transform, CLAHE, and Canny Edge Detection for precise iris segmentation and enhancement.</li>
@@ -377,13 +377,13 @@ function loadBioSecure() {
                 <h2>System Overview</h2>
                 <div class="page">
                     <h3>Matching & Verification</h3>
-                    <img src="images/projects/biosecure/3.png" alt="Matching Results" class="page-image" style="background-color: #eee; min-height: 200px;">
+                    <img src="images/projects/BioSecure/3.png" alt="Matching Results" class="page-image" style="background-color: #eee; min-height: 200px;">
                     <p>The generated template is compared against a database of known identities using Cosine Similarity and Euclidean Distance metrics to determine a match with a high confidence score.</p>
                 </div>
 
                 <div class="page">
                     <h3>Advanced Image Processing & Feature Extraction</h3>
-                    <img src="images/projects/biosecure/4.png" alt="Processing Pipeline" class="page-image" style="background-color: #eee; min-height: 200px;">
+                    <img src="images/projects/BioSecure/4.png" alt="Processing Pipeline" class="page-image" style="background-color: #eee; min-height: 200px;">
                     <p>The system implements a robust pipeline starting with CLAHE and bilateral filtering for noise reduction, followed by Hough Circle Transforms to precisely isolate the iris. It then extracts unique biometric features from the unwrapped iris (normalized via Daugman's method) using a hybrid approach of Gabor Filters and Local Binary Patterns (LBP) to create a distinct biometric template.</p>
                 </div>
                 
