@@ -347,3 +347,35 @@ function loadQuizWebsite() {
 function goToWorkPage() {
     location.reload()
 }
+
+// Toggle Earlier Work Section
+const toggleBtn = document.getElementById('toggleEarlierWork');
+const toggleBtnBottom = document.getElementById('toggleEarlierWorkBottom');
+const earlierWorkSection = document.getElementById('earlierWorkSection');
+const toggleText = document.getElementById('toggleText');
+const toggleIcon = document.getElementById('toggleIcon');
+
+if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+        earlierWorkSection.classList.toggle('show');
+        toggleBtn.classList.toggle('active');
+
+        if (earlierWorkSection.classList.contains('show')) {
+            toggleText.textContent = 'Show Less';
+        } else {
+            toggleText.textContent = 'Show Earlier Work';
+        }
+    });
+}
+
+// Bottom button also toggles the section
+if (toggleBtnBottom) {
+    toggleBtnBottom.addEventListener('click', function () {
+        earlierWorkSection.classList.remove('show');
+        toggleBtn.classList.remove('active');
+        toggleText.textContent = 'Show Earlier Work';
+
+        // Smooth scroll back to the top button
+        toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+}

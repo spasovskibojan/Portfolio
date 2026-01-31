@@ -743,6 +743,84 @@ footer p {
     margin: 0 auto;
 }
 
+/* Show More Projects Button */
+.show-more-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.show-more-btn {
+    background-color: #ffffff;
+    color: #0066cc;
+    border: 2px solid #0066cc;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.show-more-btn:hover {
+    background-color: #0066cc;
+    color: white;
+}
+
+.show-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.show-more-btn.active i {
+    transform: rotate(180deg);
+}
+
+/* Hide top button when section is expanded */
+.show-more-btn.active {
+    display: none;
+}
+
+
+/* Earlier Work Section */
+.earlier-work-section {
+    display: none;
+}
+
+.earlier-work-section.show {
+    display: block;
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.earlier-work-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.earlier-work-header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2f2f2f;
+    margin-bottom: 10px;
+}
+
+.earlier-work-header p {
+    font-size: 16px;
+    color: #888;
+}
 
 .projects-sites h3 {
     font-size: 30px;

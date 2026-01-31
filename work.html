@@ -105,22 +105,41 @@
                     <img src="images/projects/ministry1.png" alt="quiz" width="450" id="ministry">
                 </div>
                 <hr>
-                <div class="projects-sites">
-                    <img src="images/quiz.jpg" alt="quiz" width="450" id="quiz">
-                    <div class="quiz-text">
-                        <h3>Educational Quiz</h3>
-                        <p>Interactive educational platform for natural science subjects (Geography, Biology, Maths,
-                            Chemistry, Physics).
-                            Features personalized 20-question quizzes, real-time score tracking, and answer review
-                            functionality.
-                            Demonstrates front-end web development and user experience design skills.
-                        </p>
-                        <a class="liveDemoLink" target="_blank"
-                            href="https://spasovskibojan.github.io/Edukativen-Kviz/">🔗 Live Demo</a>
-                        <span class="moreDetailsProjects" onclick="loadQuizWebsite()">Detailed info</span>
+
+                <!-- Show More Projects Button -->
+                <div class="show-more-container">
+                    <button id="toggleEarlierWork" class="show-more-btn">
+                        <span id="toggleText">Show Earlier Work</span>
+                        <i id="toggleIcon" class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+
+                <!-- Earlier Work Section (Hidden by default) -->
+                <div id="earlierWorkSection" class="earlier-work-section">
+                    <div class="projects-sites">
+                        <img src="images/quiz.jpg" alt="quiz" width="450" id="quiz">
+                        <div class="quiz-text">
+                            <h3>Educational Quiz</h3>
+                            <p>Interactive educational platform for natural science subjects (Geography, Biology, Maths,
+                                Chemistry, Physics).
+                                Features personalized 20-question quizzes, real-time score tracking, and answer review
+                                functionality.
+                                Demonstrates front-end web development and user experience design skills.
+                            </p>
+                            <a class="liveDemoLink" target="_blank"
+                                href="https://spasovskibojan.github.io/Edukativen-Kviz/">🔗 Live Demo</a>
+                            <span class="moreDetailsProjects" onclick="loadQuizWebsite()">Detailed info</span>
+                        </div>
+                    </div>
+
+                    <!-- Show Less Button at Bottom -->
+                    <div class="show-more-container">
+                        <button id="toggleEarlierWorkBottom" class="show-more-btn">
+                            <span>Show Less</span>
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
                     </div>
                 </div>
-                <hr>
             </div>
         </section>
         <div class="companies">
