@@ -52,6 +52,73 @@ if (location.href == 'contact.html') {
 }
 
 // Work script
+function loadSmartRoutingApp() {
+    var firstStatePage = document.getElementById('workPageContainer');
+    firstStatePage.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    var singleProject = document.getElementById('singleProjectPart');
+    singleProject.innerHTML = `
+        <div class="portfolio-container">
+            <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
+            <section class="project-overview">
+                <h1>Smart Routing App - Route Optimization Platform</h1>
+                <p>I designed and developed a comprehensive route optimization web application that revolutionizes trip planning through intelligent algorithms and modern web technologies. This full-stack solution combines React, Django, and the Travelling Salesman Algorithm to provide users with the most efficient paths between multiple destinations, supporting various transportation modes and route types.</p>
+                <img src="images/projects/Smart_Routing_App/1.png" alt="Smart Routing App Main Interface">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Advanced Route Optimization:</strong> Implements the Travelling Salesman Algorithm to calculate the shortest possible route visiting all destinations, supporting both round-trip and one-way journey types.</li>
+                    <li><strong>Multi-Modal Transportation:</strong> Users can optimize routes for three different transportation modes - car, bicycle, or walking - each with tailored routing algorithms.</li>
+                    <li><strong>Interactive Map Interface:</strong> Built on OpenStreetMap via React Leaflet, allowing users to add locations by clicking directly on the map or searching by name with autocomplete suggestions.</li>
+                    <li><strong>Turn-by-Turn Navigation:</strong> Provides detailed step-by-step directions with distance and estimated time for each segment of the journey.</li>
+                    <li><strong>User Authentication:</strong> Secure JWT-based authentication system enabling personalized experiences and saved routes per user account.</li>
+                    <li><strong>Route Management:</strong> Save routes with custom names, load previously saved routes, and import locations from CSV files (format: title, lng, lat).</li>
+                    <li><strong>Real-Time Route Visualization:</strong> Drag and drop waypoints to adjust routes dynamically, with real-time updates on the map.</li>
+                </ul>
+                <p>This project demonstrates my expertise in <strong>Django REST Framework</strong>, <strong>React</strong>, and <strong>external API integration</strong>. The seamless integration of OpenStreetMap, OpenCage Data, and OpenRouteService APIs showcases my ability to build complex, real-world applications that solve practical problems efficiently.</p>
+            </section>
+            
+            <section class="page-overview">
+                <h2>Features Overview</h2>
+                <div class="page">
+                    <h3>Interactive Map & Location Management</h3>
+                    <img src="images/projects/Smart_Routing_App/1.png" alt="Map Interface Screenshot" class="page-image">
+                    <p>Add destinations by clicking directly on the map or using the location search with autocomplete. Drag and drop markers to reorder waypoints, with the optimized route updating dynamically on the map interface.</p>
+                </div>
+                <div class="page">
+                    <h3>Turn-by-Turn Navigation</h3>
+                    <img src="images/projects/Smart_Routing_App/2.png" alt="Navigation Directions Screenshot" class="page-image">
+                    <p>Detailed turn-by-turn navigation instructions with precise distance measurements and estimated travel time for each segment. The directions are dynamically generated based on the optimized route and selected transportation mode.</p>
+                </div>
+                <div class="page">
+                    <h3>Route Optimization Modes</h3>
+                    <img src="images/projects/Smart_Routing_App/modes.png" alt="Transportation Modes Screenshot" class="page-image">
+                    <p>Choose between round-trip and one-way routes, and select your preferred transportation mode (car, bicycle, or walking). The TSP algorithm ensures the most efficient path is calculated for your specific needs.</p>
+                </div>
+                <div class="page">
+                    <h3>Save & Load Routes</h3>
+                    <img src="images/projects/Smart_Routing_App/save.png" alt="Save Routes Screenshot" class="page-image">
+                    <p>Authenticated users can save their optimized routes with custom names and reload them anytime. The application also supports CSV import for bulk location additions, streamlining the route planning process.</p>
+                </div>
+                
+                <div class="code-look page">
+                    <h3>Technology Stack</h3>
+                    <ul>
+                        <li><strong>Frontend:</strong> React 19, Vite, React Leaflet, Bootstrap 5, React Router</li>
+                        <li><strong>Backend:</strong> Django 5.2, Django REST Framework, Simple JWT, Gunicorn</li>
+                        <li><strong>Database:</strong> PostgreSQL (Neon Cloud)</li>
+                        <li><strong>External APIs:</strong> OpenStreetMap, OpenCage Data (Geocoding), OpenRouteService (Route Calculation)</li>
+                        <li><strong>Deployment:</strong> Render (Frontend & Backend), Neon (Database)</li>
+                        <li><strong>Key Algorithms:</strong> Travelling Salesman Problem (TSP) for route optimization</li>
+                    </ul>
+                    <a target="_blank" href="https://smart-routing-app-1.onrender.com/">Live Demo of the project</a>
+                    <span style="display:block">(because of the deployment limits, you may need to wait up to 1 minute for the project to start)</span>
+                </div>
+            </section>
+        </div>
+    `;
+}
+
 function loadMinistryWebsite() {
     var firstStatePage = document.getElementById('workPageContainer');
     firstStatePage.innerHTML = "";
