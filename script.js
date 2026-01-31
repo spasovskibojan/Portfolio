@@ -112,7 +112,10 @@ function loadSmartRoutingApp() {
                         <li><strong>Key Algorithms:</strong> Travelling Salesman Problem (TSP) for route optimization</li>
                     </ul>
                     <a target="_blank" href="https://smart-routing-app-1.onrender.com/">Live Demo of the project</a>
-                    <span style="display:block">(because of the deployment limits, you may need to wait up to 1 minute for the project to start)</span>
+                    <div class="deployment-notice">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Note:</strong> First load may take up to 1 minute while the server starts.
+                    </div>
                 </div>
             </section>
         </div>
@@ -187,7 +190,7 @@ function loadAIResumePlatform() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>AI Resume & Career Platform</h1>
-                <p>An AI-powered platform using Python and Streamlit that revolutionizes job applications through intelligent automation. Combines Resume Analyzer and AI Career Coach features, leveraging Meta's Llama 3.3 70B via Groq API for ultra-fast inference.</p>
+                <p>An AI-powered platform using Python and Streamlit for resume analysis and career guidance. Integrates Meta's Llama 3.3 70B via Groq API for fast AI-powered insights and recommendations.</p>
                 <img src="images/projects/AI_Resume_Platform/2.png" alt="AI Resume Platform Main Interface" style="width:50%; height:40%;">
                 <h2>Key Features</h2>
                 <ul>
@@ -195,7 +198,7 @@ function loadAIResumePlatform() {
                     <li><strong>Career Coaching:</strong> Personalized career path recommendations and skills development guidance.</li>
                     <li><strong>Interview Preparation:</strong> Auto-generated technical and behavioral interview questions tailored to your profile.</li>
                 </ul>
-                <p>This project shows my expertise in AI integration, NLP, PDF parsing with PyPDF2, and building scalable Streamlit applications with production-ready resource management.</p>
+                <p>This project demonstrates AI API integration, NLP techniques, PDF parsing with PyPDF2, and building production Streamlit applications with resource management and rate limiting.</p>
             </section>
             
             <section class="page-overview">
@@ -230,6 +233,10 @@ function loadAIResumePlatform() {
                         <li><strong>Resource Management:</strong> Smart rate limiting with daily tracking</li>
                     </ul>
                     <a target="_blank" href="https://resume-career-platform.streamlit.app/">Live Demo of the project</a>
+                    <div class="deployment-notice">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Note:</strong> App may be sleeping. Click "Yes, get this app back up!" if prompted.
+                    </div>
                 </div>
             </section>
         </div>
