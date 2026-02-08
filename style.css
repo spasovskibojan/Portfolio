@@ -147,10 +147,6 @@ body {
     max-width: fit-content;
 }
 
-.main-right-bottom .education {
-    /*max-width: 60%;*/
-}
-
 .education ul {
     list-style-type: disclosure-closed;
 }

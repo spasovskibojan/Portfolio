@@ -403,6 +403,76 @@ function loadBioSecure() {
     `;
 }
 
+function loadCryptoAnalysis() {
+    var firstStatePage = document.getElementById('workPageContainer');
+    firstStatePage.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    var singleProject = document.getElementById('singleProjectPart');
+    singleProject.innerHTML = `
+        <div class="portfolio-container">
+            <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
+            <section class="project-overview">
+                <h1>CryptoAnalysis Platform</h1>
+                <p>I designed and developed a production-ready cryptocurrency market intelligence platform that combines technical analysis, fundamental analysis, and machine learning to provide comprehensive market insights. Built with a microservices architecture, this full-stack application demonstrates advanced software engineering practices including distributed systems design, AI/ML integration, and intelligent cloud resource management.</p>
+                <img src="images/projects/crypto/1.png" alt="CryptoAnalysis Main Interface">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Real-Time Market Tracking:</strong> Monitor 10+ major cryptocurrencies with live price updates, interactive Chart.js visualizations, and historical data across multiple timeframes (1-minute to daily candles).</li>
+                    <li><strong>Advanced Technical Analysis:</strong> Implements 9 technical indicators including SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic Oscillator, Volume Analysis, and ADX for comprehensive market trend analysis.</li>
+                    <li><strong>AI-Powered Predictions:</strong> LSTM neural network trained on historical market data provides time-series price predictions, deployed on HuggingFace Spaces for scalable inference.</li>
+                    <li><strong>Sentiment Analysis:</strong> Aggregates latest cryptocurrency news with VADER NLP sentiment scoring to gauge market sentiment and potential price movements.</li>
+                    <li><strong>On-Chain Metrics:</strong> Displays blockchain fundamentals including hash rates, transaction volumes, market dominance, NVT ratios, DeFi TVL, and whale activity patterns via multiple API integrations.</li>
+                    <li><strong>Microservices Architecture:</strong> Distributed system with Django web app, two FastAPI microservices for technical/fundamental analysis, and intelligent service orchestration.</li>
+                    <li><strong>Production-Grade Reliability:</strong> Implements graceful degradation, automated service wake-up with health checks, concurrent request handling, and comprehensive fallback mechanisms for API rate limits.</li>
+                </ul>
+                <p>This project showcases my ability to architect complex, scalable systems while operating within budget constraints—achieving enterprise-level functionality using only free-tier cloud resources through intelligent design patterns. The integration of machine learning, NLP, and distributed systems highlights my cross-domain expertise.</p>
+            </section>
+            
+            <section class="page-overview">
+                <h2>Features Overview</h2>
+                <div class="page">
+                    <h3>Market Dashboard & Real-Time Data</h3>
+                    <img src="images/projects/crypto/2.png" alt="Market Dashboard" class="page-image">
+                    <p>Interactive dashboard displaying real-time cryptocurrency prices with percentage changes. Users can track multiple assets simultaneously and access detailed analysis for each coin with a single click.</p>
+                </div>
+                <div class="page">
+                    <h3>Technical Analysis & Indicators</h3>
+                    <img src="images/projects/crypto/3.png" alt="Technical Analysis" class="page-image">
+                    <p>Comprehensive technical analysis featuring 9 industry-standard indicators.</p>
+                </div>
+                <div class="page">
+                    <h3>AI Price Predictions</h3>
+                    <img src="images/projects/crypto/4.png" alt="AI Predictions" class="page-image">
+                    <p>LSTM neural network provides machine learning-powered price forecasts based on historical patterns. The model is trained on market data and deployed as a separate microservice for scalable predictions.</p>
+                </div>
+                <div class="page">
+                    <h3>Fundamental Analysis & Sentiment</h3>
+                    <img src="images/projects/crypto/5.png" alt="Fundamental Analysis" class="page-image">
+                    <p>Aggregates news sentiment using VADER NLP, on-chain metrics like transaction volumes and hash rates, DeFi TVL data, and exchange flow analysis to provide comprehensive fundamental insights beyond just price action.</p>
+                </div>
+                
+                <div class="code-look page">
+                    <h3>Technology Stack & Architecture</h3>
+                    <ul>
+                        <li><strong>Frontend:</strong> Bootstrap, Chart.js for interactive visualizations</li>
+                        <li><strong>Backend:</strong> Django (web app), FastAPI (microservices), Pandas/NumPy for data processing</li>
+                        <li><strong>Machine Learning:</strong> LSTM neural network (TensorFlow/Keras), VADER NLP for sentiment analysis</li>
+                        <li><strong>External APIs:</strong> CoinGecko, CryptoCompare, Blockchain.com, DeFiLlama</li>
+                        <li><strong>Deployment:</strong> Render (Django + FastAPI services), HuggingFace Spaces (LSTM model)</li>
+                        <li><strong>Advanced Features:</strong> Concurrent request handling with ThreadPoolExecutor, automated service orchestration, graceful degradation patterns</li>
+                    </ul>
+                    <a target="_blank" href="https://cryptoanalysis-web.onrender.com/">Live Demo of the project</a>
+                    <div class="deployment-notice">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Note:</strong> First load may take 1-2 minutes as microservices initialize. The app automatically wakes dormant services.
+                    </div>
+                </div>
+            </section>
+        </div>
+    `;
+}
+
 
 function goToWorkPage() {
     location.reload()
