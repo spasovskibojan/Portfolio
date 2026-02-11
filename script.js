@@ -62,72 +62,67 @@ function loadEmailAuto() {
         <div class="portfolio-container">
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
-                <h1>EmailAuto - Enterprise AI Multi-Agent Email Automation</h1>
-                <p>I architected and developed a <strong>production-grade enterprise AI system</strong> featuring a sophisticated multi-agent cognitive architecture built entirely from scratch. This system goes far beyond basic automation—it implements intelligent decision-making through coordinated AI agents that analyze sender context, reason about organizational involvement, and generate context-aware responses with automatic CC/BCC suggestions based on employee roles and criticality assessment.</p>
+                <h1>EmailAuto - Enterprise AI Email Automation</h1>
+                <p>I built a <strong>production-ready AI system</strong> that helps companies automate their email support. Instead of simple auto-replies, I created a smart system where three different AI agents work together to understand who is sending the email, decide which department should handle it, and write a human-like response. The system is smart enough to know when to CC a manager or BCC the finance team based on the email's content.</p>
                 <img src="images/projects/emailauto/personal_dashboard.png" alt="EmailAuto Personal Dashboard">
                 <p><span style="color: #007bff; font-weight: bold;">🏢 Industry Project - Finqup Internship (Summer 2025)</span></p>
-                <h2>System Architecture</h2>
-                <p>EmailAuto implements a <strong>distributed microservices architecture</strong> with <strong>Thread-Aware Routing</strong> and <strong>Customer History Tracking</strong>. Specialized AI agents work in a coordinated pipeline with <strong>department-based isolation</strong>. The system supports multi-tenant operation with role-based access control (Manager/Employee roles), multi-account email management, and three automation modes: Manual, Semi-Automatic (AI drafts, human approves), and Full-Automatic (AI responds autonomously for non-critical emails).</p>
-                <p>The backend consists of six core Python microservices orchestrating complex workflows: <strong>GeminiService</strong> (AI gateway with Gemini 2.5 Flash), <strong>MultiAgentService</strong> (3-agent pipeline orchestrator), <strong>AgentService</strong> (agent lifecycle & configuration), <strong>EmailService</strong> (IMAP/SMTP integration with thread tracking), <strong>SchedulerService</strong> (background task workers), and <strong>AuthService</strong> (JWT-based multi-tenant authentication).</p>
+                <h2>System Overview</h2>
+                <p>EmailAuto uses a <strong>microservices architecture</strong> (splitting the app into smaller, independent parts) to handle emails efficiently. It features <strong>Thread-Aware Routing</strong> (remembering conversations) and <strong>Customer History</strong> (tracking past emails). The data for each department is kept separate and secure. It has three modes: Manual (you write the email), Semi-Auto (AI writes a draft, you check it), and Full-Auto (AI replies on its own for simple emails).</p>
+                <p>The backend is built with <strong>Python and FastAPI</strong>, using six specialized services. These handle everything from connecting to <strong>Google's Gemini AI</strong> to sending the actual emails.</p>
             </section>
             
             <section class="page-overview">
-                <h2>Advanced AI Engineering & Multi-Agent Workflow</h2>
+                <h2>How the AI Agents Work Together</h2>
                 
                 <div class="page">
-                    <h3>Three-Agent Cognitive Pipeline with External Intelligence</h3>
+                    <h3>The 3-Step AI Workflow</h3>
                     <img src="images/projects/emailauto/company_reasoner_1.png" alt="Department-Based Multi-Agent Architecture" class="page-image">
-                    <p>The system's intelligence comes from a <strong>coordinated three-agent workflow</strong> I designed from scratch, enhanced with external data enrichment:</p>
+                    <p>I designed a workflow where three AI agents act like a real support team:</p>
                     <ul>
-                        <li><strong>Classifier Agent (The Router):</strong> First point of contact that analyzes incoming emails with <strong>Gemini API</strong> to research sender companies (e.g., identifies "@ibm.com" as IBM Corporation with business context). Routes emails to appropriate departments based on content classification (Sales, Support, Finance, Technical, etc.) and maintains thread continuity—subsequent replies on the same thread bypass classification and route directly to the original handling department.</li>
-                        <li><strong>Reasoner Agent (The Strategist):</strong> Department-specific AI that performs <strong>advanced reasoning</strong> about response strategy. Analyzes email threads, accesses department-specific knowledge bases, and crucially, performs <strong>intelligent CC/BCC reasoning</strong>—evaluates employee job descriptions and custom "when to include" rules to suggest colleagues with >80% confidence threshold. Generates structured decision summaries (who to involve, what information to include, which documents to attach) via JSON outputs.</li>
-                        <li><strong>Writer Agent (The Editor):</strong> Takes the Reasoner's strategic plan and generates the final email with department-specific tone, mandatory compliance footers, and selected attachments from the knowledge base. Each department has unique Writer configurations (e.g., "Empathetic" for Support, "Persuasive" for Sales).</li>
+                        <li><strong>1. The Classifier (The Router):</strong> This agent reads the new email first. It uses <strong>Gemini API</strong> to research the sender (e.g., seeing "@ibm.com" and knowing it's a business email). It then sends the email to the right department (Sales, Support, Finance, etc.). If it's a reply to an existing conversation, it smartly routes it back to the same department immediately.</li>
+                        <li><strong>2. The Reasoner (The Strategist):</strong> This agent doesn't write the email; it plans <em>what</em> to do. It looks at the email, checks the company's files for answers, and decides who else needs to see the reply. It uses a <strong>smart confidence check</strong> to suggest CCing or BCCing other employees (like CCing a manager on a big sales lead).</li>
+                        <li><strong>3. The Writer (The Editor):</strong> This agent takes the plan and writes the final professional email. It knows the "voice" of the department (e.g., Support sounds helpful, Sales sounds persuasive) and adds any necessary attachments.</li>
                     </ul>
-                    <p>This <strong>chain-of-thought distributed reasoning</strong> enables sophisticated decision-making impossible with single-prompt systems, including organizational awareness and context-rich response generation.</p>
                 </div>
 
                 <div class="page">
-                    <h3>Intelligent CC/BCC Reasoning System</h3>
+                    <h3>Smart CC & BCC Suggestions</h3>
                     <img src="images/projects/emailauto/personal_generation_of_response_3.png" alt="AI Agent Configuration Interface" class="page-image">
-                    <p>One of the most advanced features is the <strong>AI-powered CC/BCC suggestion system</strong> I engineered:</p>
+                    <p>One of the smartest features is how the system handles CC and BCC:</p>
                     <ul>
-                        <li><strong>Employee Profile Analysis:</strong> Each department maintains a list of employees with job descriptions and custom rules defining "when to CC" and "when to BCC" this person</li>
-                        <li><strong>Confidence-Based Inclusion:</strong> The Reasoner agent analyzes the email context, planned response, and employee profiles, then suggests CC/BCC only when confidence exceeds 80%—preventing unnecessary email noise</li>
-                        <li><strong>Contextual Understanding:</strong> The AI understands organizational hierarchies and decides intelligently (e.g., "CC the sales manager on high-value leads," "BCC finance on pricing discussions")</li>
-                        <li><strong>Manual Override:</strong> Users can configure automatic CC/BCC for specific roles or override AI suggestions</li>
+                        <li><strong>Employee Profiles:</strong> The system knows what every employee does and has rules for when to include them.</li>
+                        <li><strong>Confidence Check:</strong> The AI only suggests adding someone to the email if it is more than 80% sure they are needed. This prevents spamming managers with unnecessary emails.</li>
+                        <li><strong>Context Aware:</strong> It understands the difference between a routine question (no manager needed) and a critical issue (manager needs to be CC'd).</li>
+                        <li><strong>Manual Override:</strong> Users can always change the AI's suggestions if needed.</li>
                     </ul>
-                    <p>This demonstrates my ability to design <strong>AI systems that understand organizational dynamics</strong>, not just email content.</p>
                 </div>
                 
                 <div class="page">
-                    <h3>Multi-Mode Automation with Severity Detection</h3>
+                    <h3>Automation Modes & Safety Check</h3>
                     <img src="images/projects/emailauto/personal_permissions.png" alt="AI Response Generation with Automation Modes" class="page-image">
-                    <p>The system implements <strong>three automation modes</strong> configurable per department, with intelligent criticality assessment:</p>
+                    <p>Companies can choose how much control they want:</p>
                     <ul>
-                        <li><strong>Manual Mode:</strong> Traditional email client—user writes all responses</li>
-                        <li><strong>Semi-Automatic Mode:</strong> AI generates complete responses with CC/BCC suggestions and attachments, but requires human approval before sending. Ideal for maintaining oversight while leveraging AI efficiency.</li>
-                        <li><strong>Full-Automatic Mode:</strong> The system autonomously responds to emails <em>unless</em> a dedicated AI agent assesses the email's <strong>criticality score >70%</strong>. Critical emails automatically fall back to Semi-Automatic mode for human review.</li>
+                        <li><strong>Manual Mode:</strong> Use it like a normal email client.</li>
+                        <li><strong>Semi-Automatic:</strong> The AI writes the draft and suggests attachments/CCs, but a human must click "Send". Great for keeping control while saving time.</li>
+                        <li><strong>Full-Automatic:</strong> The AI responds on its own, BUT with a safety net. A special AI agent checks every email for "criticality" (urgency, anger, legal issues). If the score is higher than 70%, it stops and asks a human to review it first.</li>
                     </ul>
-                    <p><strong>Criticality Detection:</strong> A specialized AI agent analyzes email threads and company context to determine severity using factors like urgency indicators, financial implications, complaint sentiment, and legal keywords. This showcases my understanding of <strong>AI-driven decision gates</strong> in production systems.</p>
                 </div>
 
                 <div class="page">
-                    <h3>RAG Implementation with Department-Specific Knowledge Bases</h3>
+                    <h3>Knowledge Base (RAG)</h3>
                     <img src="images/projects/emailauto/company_classifier_1.png" alt="System Analytics & Department Intelligence" class="page-image">
-                    <p>Implemented <strong>Retrieval-Augmented Generation (RAG)</strong> with a department-isolated architecture:</p>
+                    <p>To make sure the AI gives correct answers, I built a <strong>Retrieval-Augmented Generation (RAG) system</strong> using a simple but effective file structure:</p>
                     <ul>
-                        <li><strong>File-Based Knowledge Storage:</strong> Each department has an <code>/uploads</code> directory containing PDFs, text files, and documents (pricing lists, product specs, policies, templates)</li>
-                        <li><strong>Dynamic Context Injection:</strong> When the Reasoner identifies questions requiring specific knowledge (e.g., "What's the pricing for Enterprise plan?"), relevant documents are retrieved and their content injected into the Writer's prompt</li>
-                        <li><strong>Department Isolation:</strong> Sales agents can't access Support documents and vice versa, ensuring knowledge base security and relevance</li>
-                        <li><strong>Semantic Matching:</strong> The system analyzes document descriptions to determine relevance, then extracts and injects pertinent sections</li>
+                        <li><strong>Department Folders:</strong> Each department has its own <code>/uploads</code> folder with PDFs, policies, and price lists.</li>
+                        <li><strong>Smart Search:</strong> When a question comes in (e.g., "How much is the Pro plan?"), the system finds the right document and gives that information to the AI Writer.</li>
+                        <li><strong>Data Privacy:</strong> Sales agents can't see Support documents, keeping data secure and relevant.</li>
                     </ul>
-                    <p>This ensures AI responses contain <strong>accurate, company-specific information</strong> without hallucination—critical for enterprise use.</p>
                 </div>
 
                 <div class="page">
                     <h3>AI Response Generation Workflow</h3>
                     <img src="images/projects/emailauto/generating_emails_collage.jpg" alt="AI Response Generation Workflow Collage" class="page-image">
-                    <p>A visual breakdown of how the agents analyze context, reason about the strategy, and generate the final email response. Also there is an option to review the generated email and edit it before sending.</p>
+                    <p>The agents analyze context, reason about the strategy, and generate the final email response. There is also an option to review the generated email and edit it before sending.</p>
                 </div>
                 
                 <div class="code-look page">
@@ -140,18 +135,16 @@ function loadEmailAuto() {
                         <li><strong>Authentication & Authorization:</strong> JWT-based authentication, Multi-level access control (Personal/Company/Admin/Manager/Employee roles), Department-specific permissions</li>
                         <li><strong>Frontend:</strong> Angular 17, TypeScript, Responsive UI with real-time updates, Role-based interface adaptation</li>
                     </ul>
-                    <h3>Key Engineering Achievements</h3>
+                    <h3>My Key Achievements</h3>
                     <ul>
-                        <li>Designed and implemented <strong>enterprise multi-agent AI architecture</strong> with three specialized agents working in a coordinated cognitive pipeline</li>
-                        <li>Engineered <strong>intelligent CC/BCC reasoning system</strong> that analyzes employee roles and suggests inclusions with confidence-based thresholds</li>
-                        <li>Built <strong>multi-mode automation</strong> with AI-driven severity detection to gate fully autonomous responses</li>
-                        <li>Leveraged <strong>Gemini API</strong> for real-time company research and sender context enrichment</li>
-                        <li>Implemented <strong>production-grade RAG system</strong> with department-isolated knowledge bases and dynamic context injection</li>
-                        <li>Created <strong>thread-aware routing</strong> with conversation continuity and CRM-like customer history tracking</li>
-                        <li>Developed <strong>modular microservices backend</strong> supporting enterprise workflows with department routing, role-based access, and multi-tenant architecture</li>
-                        <li>Designed <strong>hierarchical data architecture</strong> with department isolation ensuring security and scalability</li>
+                        <li>Designed the <strong>3-agent workflow</strong> that mimics a real human team.</li>
+                        <li>Built the <strong>Smart CC/BCC logic</strong> that understands company roles.</li>
+                        <li>Created the <strong>Safety Net</strong> (Criticality Score) for fully automated replies.</li>
+                        <li>Integrated <strong>Gemini API</strong> to research companies in real-time.</li>
+                        <li>Built a system that keeps <strong>department data separate</strong> and secure.</li>
+                        <li>Implemented <strong>Thread-Aware Routing</strong> to maintain conversation context.</li>
                     </ul>
-                    <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship as a production-intended AI product (I have approval to include it in my portfolio). The system demonstrates enterprise-grade AI agent development with real-world complexity like organizational reasoning, multi-mode automation, and role-based orchestration. Contact me for a live demo of the multi-agent system in action.</em></p>
+                    <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship as a production-intended AI product (I have approval to include it in my portfolio). Use the contact form to request a live demo.</em></p>
                 </div>
             </section>
         </div>
