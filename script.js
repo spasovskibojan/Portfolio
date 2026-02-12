@@ -151,6 +151,81 @@ function loadEmailAuto() {
     `;
 }
 
+function loadELDViewer() {
+    var firstStatePage = document.getElementById('workPageContainer');
+    firstStatePage.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    var singleProject = document.getElementById('singleProjectPart');
+    singleProject.innerHTML = `
+        <div class="portfolio-container">
+            <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
+            <section class="project-overview">
+                <h1>ELD HUD Logs Viewer - Chrome Extension</h1>
+                <p>I built a <strong>Chrome extension</strong> that helps trucking companies view and analyze driver logs from Electronic Logging Devices (ELD). The extension uses a HUD (Heads-Up Display) interface to show driver activity, automatically detect  violations, and compare performance across multiple days. It's designed to make it easy for dispatchers and compliance officers to check if drivers are following Hours of Service (HOS) rules.</p>
+                <img src="images/projects/eld_plugin/1.jpg" alt="ELD HUD Interface">
+                <p><span style="color: #007bff; font-weight: bold;">🏢 Industry Project - Finqup Internship (Summer 2025)</span></p>
+                <h2>What It Does</h2>
+                <p>The extension shows driver logs in a visual timeline format - similar to a graph. It tracks driving time, breaks, and off-duty periods. The system automatically calculates violations (like driving more than 11 hours) and highlights them in red. It also handles drivers who switch between multiple trucks during their shifts.</p>
+                <p>Built with <strong>Vanilla JavaScript</strong> and <strong>Chart.js</strong>, using Chrome's Extension API for side panel integration and local storage.</p>
+            </section>
+            
+            <section class="page-overview">
+                <h2>Key Features</h2>
+                
+                <div class="page">
+                    <h3>HUD Log Visualization</h3>
+                    <img src="images/projects/eld_plugin/2.jpg" alt="Daily Log View" class="page-image">
+                    <p>The main feature is a visual timeline that shows a driver's activity for the day:</p>
+                    <ul>
+                        <li><strong>Color-Coded Status:</strong> Each activity (Driving, On Duty, Sleeper Berth, Off Duty) has a different color on the timeline.</li>
+                        <li><strong>Real-Time Info:</strong> When you click on a segment, it shows the exact time range and duration.</li>
+                    </ul>
+                </div>
+
+                <div class="page">
+                    <h3>Log Analysis & Compliance Visualization</h3>
+                    <img src="images/projects/eld_plugin/3.jpg" alt="Log Comparison Metrics" class="page-image">
+                    <p>The extension helps visualize driver logs to make it easier to check compliance with Hours of Service (HOS) regulations - rules that limit how long truck drivers can work each day (11-hour driving limit, 14-hour shift limit, required breaks).</p>
+                </div>
+                
+                <div class="page">
+                    <h3>Advanced Features</h3>
+                    <img src="images/projects/eld_plugin/4.jpg" alt="Suggested Solutions Modal" class="page-image">
+                    <p>Additional tools that make the extension powerful:</p>
+                    <ul>
+                        <li><strong>Log Comparison Tool:</strong> Shows which day had the least driving time, calculates 70-hour cycle usage, and displays recap hours.</li>
+                        <li><strong>Draggable Modals:</strong> All popup windows can be moved around the screen and locked in place.</li>
+                        <li><strong>Keyboard Shortcuts:</strong> Quick access to common features using hotkeys.</li>
+                        <li><strong>Driver Selector:</strong> Dropdown menu to quickly switch between different drivers.</li>
+                        <li><strong>Date Navigation:</strong> Easy navigation between different dates for drivers with multi-day records.</li>
+                    </ul>
+                </div>
+                
+                <div class="code-look page">
+                    <h3>Tech Stack</h3>
+                    <ul>
+                        <li><strong>Platform:</strong> Chrome Extension (Manifest V3)</li>
+                        <li><strong>Language:</strong> Vanilla JavaScript (ES6 Modules)</li>
+                        <li><strong>UI Library:</strong> Chart.js for visualizations</li>
+                        <li><strong>Styling:</strong> CSS3 with modular architecture</li>
+                        <li><strong>Storage:</strong> Chrome Storage API for data persistence</li>
+                    </ul>
+                    <h3>My Key Achievements</h3>
+                    <ul>
+                        <li>Built a <strong>modular architecture</strong> with separate components, features, and services.</li>
+                        <li>Created <strong>violation detection algorithms</strong> that automatically check HOS compliance rules.</li>
+                        <li>Designed a clean <strong>HUD interface</strong> that makes complex log data easy to understand.</li>
+                        <li>Implemented <strong>multi-vehicle support</strong> to track drivers who switch trucks during shifts.</li>
+                        <li>Used <strong>Chrome Extension APIs</strong> for side panel integration and background tasks.</li>
+                    </ul>
+                    <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship (I have approval to include it in my portfolio). It demonstrates my ability to build Chrome extensions and work with domain-specific requirements in the transportation industry.</em></p>
+                </div>
+            </section>
+        </div>
+    `;
+}
+
 function loadSmartRoutingApp() {
     var firstStatePage = document.getElementById('workPageContainer');
     firstStatePage.innerHTML = "";
@@ -592,7 +667,7 @@ if (toggleBtn) {
         if (earlierWorkSection.classList.contains('show')) {
             toggleText.textContent = 'Show Less';
         } else {
-            toggleText.textContent = 'Show Earlier Work';
+            toggleText.textContent = 'Show More';
         }
     });
 }
@@ -602,7 +677,7 @@ if (toggleBtnBottom) {
     toggleBtnBottom.addEventListener('click', function () {
         earlierWorkSection.classList.remove('show');
         toggleBtn.classList.remove('active');
-        toggleText.textContent = 'Show Earlier Work';
+        toggleText.textContent = 'Show More';
 
         // Smooth scroll back to the top button
         toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
