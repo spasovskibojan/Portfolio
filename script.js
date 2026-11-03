@@ -4,7 +4,6 @@ const dropdown = document.querySelector('.dropdown');
 const dropdownContent = document.querySelector('.dropdown-content');
 
 function closeNavbarOnClickOutside(event) {
-    // Check if the click was outside the navbar or dropdown
     if (!navbar.contains(event.target) && !dropdown.contains(event.target)) {
         dropdownContent.style.display = 'none';
     }
@@ -26,7 +25,6 @@ dropdownButton.addEventListener('click', function (event) {
 document.addEventListener('DOMContentLoaded', (event) => {
     const currentLocation = location.href
     const menuItem = document.querySelectorAll('.navbar .nav-right li a')
-    console.log(menuItem)
     menuItem.forEach(item => {
         item.classList.remove('active')
         if (item.href == currentLocation) {
@@ -36,17 +34,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
 })
 
 // Contact form
-if (location.href == 'contact.html') {
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbggqgqo';
 
-        if (name && email && message) {
-            alert('Thank you for reaching out! I will contact you soon.');
-            document.getElementById('contact-form').reset();
-        } else {
-            alert('Please fill out all fields.');
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    const status = document.getElementById('form-status');
+    const button = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        status.textContent = 'Sending...';
+        button.disabled = true;
+
+        try {
+            const response = await fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {'Accept': 'application/json'}
+            });
+            if (response.ok) {
+                status.textContent = 'Thank you for reaching out! I will contact you soon.';
+                contactForm.reset();
+            } else {
+                status.textContent = 'Something went wrong. Please try again or email me directly.';
+            }
+        } catch (err) {
+            status.textContent = 'Network error. Please try again later.';
+        } finally {
+            button.disabled = false;
         }
     });
 }
@@ -63,9 +78,10 @@ function loadEmailAuto() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>EmailAuto - Enterprise AI Email Automation</h1>
-                <p>I built a <strong>production-ready AI system</strong> that helps companies automate their email support. Instead of simple auto-replies, I created a smart system where three different AI agents work together to understand who is sending the email, decide which department should handle it, and write a human-like response. The system is smart enough to know when to CC a manager or BCC the finance team based on the email's content.</p>
+                <p><em>Source code is private (internship project).</em></p>
+                <p>I built an <strong>end-to-end AI system (working prototype)</strong> that helps companies automate their email support. Instead of simple auto-replies, I created a smart system where three different AI agents work together to understand who is sending the email, decide which department should handle it, and write a human-like response. The system is smart enough to know when to CC a manager or BCC the finance team based on the email's content.</p>
                 <img src="images/projects/emailauto/personal_dashboard.png" alt="EmailAuto Personal Dashboard">
-                <p><span style="color: #007bff; font-weight: bold;">🏢 Industry Project - Finqup Internship (Summer 2025)</span></p>
+                <p><span style="color: #0066cc; font-weight: bold;">🏢 Built during Finqup internship (Summer 2025)</span></p>
                 <h2>System Overview</h2>
                 <p>EmailAuto uses a <strong>microservices architecture</strong> (splitting the app into smaller, independent parts) to handle emails efficiently. It features <strong>Thread-Aware Routing</strong> (remembering conversations) and <strong>Customer History</strong> (tracking past emails). The data for each department is kept separate and secure. It has three modes: Manual (you write the email), Semi-Auto (AI writes a draft, you check it), and Full-Auto (AI replies on its own for simple emails).</p>
                 <p>The backend is built with <strong>Python and FastAPI</strong>, using six specialized services. These handle everything from connecting to <strong>Google's Gemini AI</strong> to sending the actual emails.</p>
@@ -144,7 +160,7 @@ function loadEmailAuto() {
                         <li>Built a system that keeps <strong>department data separate</strong> and secure.</li>
                         <li>Implemented <strong>Thread-Aware Routing</strong> to maintain conversation context.</li>
                     </ul>
-                    <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship as a production-intended AI product (I have approval to include it in my portfolio). Use the contact form to request a live demo.</em></p>
+                    <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship as a prototype for a real company use case (I have approval to include it in my portfolio). A recorded walkthrough is available on request.</em></p>
                 </div>
             </section>
         </div>
@@ -162,9 +178,10 @@ function loadELDViewer() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>ELD HUD Logs Viewer - Chrome Extension</h1>
+                <p><em>Source code is private (internship project).</em></p>
                 <p>I built a <strong>Chrome extension</strong> that helps trucking companies view and analyze driver logs from Electronic Logging Devices (ELD). The extension uses a HUD (Heads-Up Display) interface to show driver activity, automatically detect  violations, and compare performance across multiple days. It's designed to make it easy for dispatchers and compliance officers to check if drivers are following Hours of Service (HOS) rules.</p>
                 <img src="images/projects/eld_plugin/1.jpg" alt="ELD HUD Interface">
-                <p><span style="color: #007bff; font-weight: bold;">🏢 Industry Project - Finqup Internship (Summer 2025)</span></p>
+                <p><span style="color: #0066cc; font-weight: bold;">🏢 Built during Finqup internship (Summer 2025)</span></p>
                 <h2>What It Does</h2>
                 <p>The extension shows driver logs in a visual timeline format - similar to a graph. It tracks driving time, breaks, and off-duty periods. The system automatically calculates violations (like driving more than 11 hours) and highlights them in red. It also handles drivers who switch between multiple trucks during their shifts.</p>
                 <p>Built with <strong>Vanilla JavaScript</strong> and <strong>Chart.js</strong>, using Chrome's Extension API for side panel integration and local storage.</p>
@@ -214,9 +231,7 @@ function loadELDViewer() {
                     <h3>My Key Achievements</h3>
                     <ul>
                         <li>Built a <strong>modular architecture</strong> with separate components, features, and services.</li>
-                        <li>Created <strong>violation detection algorithms</strong> that automatically check HOS compliance rules.</li>
                         <li>Designed a clean <strong>HUD interface</strong> that makes complex log data easy to understand.</li>
-                        <li>Implemented <strong>multi-vehicle support</strong> to track drivers who switch trucks during shifts.</li>
                         <li>Used <strong>Chrome Extension APIs</strong> for side panel integration and background tasks.</li>
                     </ul>
                     <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship (I have approval to include it in my portfolio). It demonstrates my ability to build Chrome extensions and work with domain-specific requirements in the transportation industry.</em></p>
@@ -237,6 +252,7 @@ function loadSmartRoutingApp() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>Smart Routing App - Route Optimization Platform</h1>
+                <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Smart-routing-app"><i class="fab fa-github"></i> View source on GitHub</a></p>
                 <p>I designed and developed a comprehensive route optimization web application that revolutionizes trip planning through intelligent algorithms and modern web technologies. This full-stack solution combines React, Django, and the Travelling Salesman Algorithm to provide users with the most efficient paths between multiple destinations, supporting various transportation modes and route types.</p>
                 <img src="images/projects/Smart_Routing_App/1.png" alt="Smart Routing App Main Interface">
                 <h2>Key Features</h2>
@@ -307,6 +323,7 @@ function loadMinistryWebsite() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>Ministry of Finance of the Republic of Macedonia - Website Development</h1>
+                <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/ministry-of-finance-mk"><i class="fab fa-github"></i> View source on GitHub</a></p>
                 <p>I designed and developed a fully responsive website for the Ministry of Finance of the Republic of Macedonia, leveraging React for the frontend and Firebase for hosting and authentication. The website offers a comprehensive user experience with multilingual support (Macedonian and English), enabling users to easily access critical information about the ministry, including news, services, and job opportunities.</p>
                 <img src="images/projects/ministry/ministry1.png" alt="">
                 <h2>Key Features</h2>
@@ -364,6 +381,7 @@ function loadAIResumePlatform() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>AI Resume & Career Platform</h1>
+                <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Resume-Career-Platform"><i class="fab fa-github"></i> View source on GitHub</a></p>
                 <p>An AI-powered platform using Python and Streamlit for resume analysis and career guidance. Integrates Meta's Llama 3.3 70B via Groq API for fast AI-powered insights and recommendations.</p>
                 <img src="images/projects/AI_Resume_Platform/2.png" alt="AI Resume Platform Main Interface" style="width:50%; height:40%;">
                 <h2>Key Features</h2>
@@ -372,7 +390,7 @@ function loadAIResumePlatform() {
                     <li><strong>Career Coaching:</strong> Personalized career path recommendations and skills development guidance.</li>
                     <li><strong>Interview Preparation:</strong> Auto-generated technical and behavioral interview questions tailored to your profile.</li>
                 </ul>
-                <p>This project demonstrates AI API integration, NLP techniques, PDF parsing with PyPDF2, and building production Streamlit applications with resource management and rate limiting.</p>
+                <p>This project demonstrates AI API integration, NLP techniques, PDF parsing with PyPDF2, and building deployed Streamlit applications with resource management and rate limiting.</p>
             </section>
             
             <section class="page-overview">
@@ -429,6 +447,7 @@ function loadTeamToDo() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>Team ToDo - Task Management Solution</h1>
+                <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Team-ToDo"><i class="fab fa-github"></i> View source on GitHub</a></p>
                 <p>I developed a robust Team ToDo application using C# .NET Framework to streamline task management for teams. This project combines a user-friendly interface with powerful backend functionality, enabling efficient collaboration and task tracking in a professional environment.</p>
                 <img src="images/projects/Team%20Todo/3.png" alt="Team ToDo Main Interface">
                 <h2>Key Features</h2>
@@ -471,8 +490,6 @@ function loadTeamToDo() {
                     <img src="images/projects/Team%20Todo/7.png" alt="Admin Role Assignment Screenshot" class="page-image">
                     <p>The User Roles page allows administrators to promote users to Administrator, Team Leader or Employee.</p>
                 </div>
-                
-                <a target="_blank" href="http://team-todo.somee.com/">Live Demo of the project</a>
             </section>
         </div>
     `;
@@ -489,6 +506,7 @@ function loadQuizWebsite() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>Educational Quiz - Interactive Learning Platform</h1>
+                <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Edukativen-Kviz"><i class="fab fa-github"></i> View source on GitHub</a></p>
                 <p>I designed and developed an interactive and engaging educational quiz application, aimed at providing users with a fun and effective way to test their knowledge. The project is built using modern web technologies to ensure a seamless user experience with a dynamic and visually appealing interface.</p>
                 <img src="images/projects/quiz/q1.png" alt="Quiz Image">
                 <h2>Key Features</h2>
@@ -535,6 +553,7 @@ function loadBioSecure() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>BioSecure - Iris Recognition System</h1>
+                <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/BioSecure-Iris-Recognition-System"><i class="fab fa-github"></i> View source on GitHub</a></p>
                 <p>BioSecure is an advanced iris recognition system built with Python and OpenCV that performs high-accuracy biometric authentication. The system uses a multi-stage pipeline involving CLAHE preprocessing, Hough Circle segmentation, and a hybrid feature extraction method (Gabor Filters, LBP, SURF). Deployed on Hugging Face Spaces via Docker, the Flask backend calculates real-time cosine similarity scores for precise identity matching. The application includes a responsive web interface and generates automated PDF analysis reports, offering a complete solution for secure identity verification.</p>
                 <img src="images/projects/BioSecure/1.png" alt="BioSecure Main Interface" style="background-color: #ccc; min-height: 300px; width: 100%; display: flex; align-items: center; justify-content: center; object-fit: cover;">
                 <h2>Key Technical Highlights</h2>
@@ -588,7 +607,8 @@ function loadCryptoAnalysis() {
             <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
             <section class="project-overview">
                 <h1>CryptoAnalysis Platform</h1>
-                <p>I designed and developed a production-ready cryptocurrency market intelligence platform that combines technical analysis, fundamental analysis, and machine learning to provide comprehensive market insights. Built with a microservices architecture, this full-stack application demonstrates advanced software engineering practices including distributed systems design, AI/ML integration, and intelligent cloud resource management.</p>
+                <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/CryptoAnalysis"><i class="fab fa-github"></i> View source on GitHub</a></p>
+                <p>I designed and developed a deployed cryptocurrency market intelligence platform that combines technical analysis, fundamental analysis, and machine learning to provide comprehensive market insights. Built with a microservices architecture, this full-stack application demonstrates advanced software engineering practices including distributed systems design, AI/ML integration, and intelligent cloud resource management.</p>
                 <img src="images/projects/crypto/1.png" alt="CryptoAnalysis Main Interface">
                 <h2>Key Features</h2>
                 <ul>
@@ -598,7 +618,7 @@ function loadCryptoAnalysis() {
                     <li><strong>Sentiment Analysis:</strong> Aggregates latest cryptocurrency news with VADER NLP sentiment scoring to gauge market sentiment and potential price movements.</li>
                     <li><strong>On-Chain Metrics:</strong> Displays blockchain fundamentals including hash rates, transaction volumes, market dominance, NVT ratios, DeFi TVL, and whale activity patterns via multiple API integrations.</li>
                     <li><strong>Microservices Architecture:</strong> Distributed system with Django web app, two FastAPI microservices for technical/fundamental analysis, and intelligent service orchestration.</li>
-                    <li><strong>Production-Grade Reliability:</strong> Implements graceful degradation, automated service wake-up with health checks, concurrent request handling, and comprehensive fallback mechanisms for API rate limits.</li>
+                    <li><strong>Reliability:</strong> Implements graceful degradation, automated service wake-up with health checks, concurrent request handling, and comprehensive fallback mechanisms for API rate limits.</li>
                 </ul>
                 <p>This project showcases my ability to architect complex, scalable systems while operating within budget constraints—achieving enterprise-level functionality using only free-tier cloud resources through intelligent design patterns. The integration of machine learning, NLP, and distributed systems highlights my cross-domain expertise.</p>
             </section>
@@ -672,19 +692,16 @@ if (toggleBtn) {
     });
 }
 
-// Bottom button also toggles the section
 if (toggleBtnBottom) {
     toggleBtnBottom.addEventListener('click', function () {
         earlierWorkSection.classList.remove('show');
         toggleBtn.classList.remove('active');
         toggleText.textContent = 'Show More';
 
-        // Smooth scroll back to the top button
         toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 }
 
-// Set current year in footer
 const yearSpan = document.getElementById('currentYear');
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();

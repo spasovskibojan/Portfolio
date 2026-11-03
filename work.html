@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Spasovski</title>
+    <title>Projects | Bojan Spasovski, AI Software Engineer</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
     <link rel="icon" href="images/all/favicon.ico" type="image/x-icon">
 </head>
 
@@ -43,12 +46,13 @@
                     <img src="images/projects/emailauto/company_dashboard.png" width="500px" alt="EmailAuto AI Platform"
                         id="emailAuto">
                     <div class="quiz-text">
-                        <h3>EmailAuto - AI Email Automation <span style="color: #007bff; font-size: 0.85em;">🏢 Industry Project</span></h3>
-                        <p>Production-grade AI email automation platform with <strong>multi-agent cognitive architecture</strong>.
+                        <h3>EmailAuto - AI Email Automation <span style="color: #0066cc; font-size: 0.85em;">🏢 Built during Finqup internship</span></h3>
+                        <p>AI email automation platform with <strong>multi-agent cognitive architecture</strong>.
                             Features specialized AI agents (Classifier → Reasoner → Writer) for context-aware responses,
                             <strong>RAG-powered knowledge base</strong>, and dual-mode operation (Personal/Company).
                             Built from scratch using <strong>Gemini API</strong> with advanced prompt engineering techniques.
                         </p>
+                        <span class="privateNote">Source private (internship project)</span>
                         <span class="moreDetailsProjects" onclick="loadEmailAuto()">Detailed info</span>
                     </div>
                 </div>
@@ -64,6 +68,7 @@
                         </p>
                         <a class="liveDemoLink" target="_blank" href="https://smart-routing-app-1.onrender.com/">🔗 Live
                             Demo</a>
+                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Smart-routing-app"><i class="fab fa-github"></i> GitHub</a>
                         <span class="moreDetailsProjects" onclick="loadSmartRoutingApp()">Detailed info</span>
                     </div>
                     <img src="images/projects/Smart_Routing_App/1.png" width="500px" alt="Smart Routing App"
@@ -83,6 +88,7 @@
                         </p>
                         <a class="liveDemoLink" target="_blank" href="https://cryptoanalysis-web.onrender.com/">🔗 Live
                             Demo</a>
+                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/CryptoAnalysis"><i class="fab fa-github"></i> GitHub</a>
                         <span class="moreDetailsProjects" onclick="loadCryptoAnalysis()">Detailed info</span>
                     </div>
                 </div>
@@ -100,6 +106,7 @@
                         </p>
                         <a class="liveDemoLink" target="_blank" href="https://resume-career-platform.streamlit.app/">🔗
                             Live Demo</a>
+                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Resume-Career-Platform"><i class="fab fa-github"></i> GitHub</a>
                         <span class="moreDetailsProjects" onclick="loadAIResumePlatform()">Detailed info</span>
                     </div>
                     <img src="images/projects/AI_Resume_Platform/1.png" width="500px" height="340px"
@@ -107,24 +114,9 @@
                 </div>
                 <hr>
 
-                <div class="projects-sites">
-                    <img src="images/projects/Team%20Todo/3.png" width="500px" alt="teamToDo" id="teamToDo">
-                    <div class="quiz-text">
-                        <h3>Team ToDo</h3>
-                        <p>Task management solution built with <strong>C# .NET</strong> featuring multi-level
-                            role-based authorization
-                            (Admin, Team Leader, Employee), DataTables integration for advanced task filtering, and
-                            secure authentication.
-                            Demonstrates full-stack development with database design and team collaboration tools.
-                        </p>
-                        <a class="liveDemoLink" target="_blank" href="http://team-todo.somee.com/">🔗 Live Demo</a>
-                        <span class="moreDetailsProjects" onclick="loadTeamToDo()">Detailed info</span>
-                    </div>
-                </div>
-                <hr>
+                                
                 
 
-                <!-- Show More Projects Button -->
                 <div class="show-more-container">
                     <button id="toggleEarlierWork" class="show-more-btn">
                         <span id="toggleText">Show More</span>
@@ -132,7 +124,6 @@
                     </button>
                 </div>
 
-                <!-- Earlier Work Section (Hidden by default) -->
                 <div id="earlierWorkSection" class="earlier-work-section">
                     <div class="projects-sites">
                         <img src="images/projects/ministry/ministry1.png" alt="Ministry of Finance" width="450" id="ministry">
@@ -146,8 +137,24 @@
                             </p>
                             <a class="liveDemoLink" target="_blank" href="https://ministryoffinancemk.web.app/">🔗 Live
                                 Demo</a>
+                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/ministry-of-finance-mk"><i class="fab fa-github"></i> GitHub</a>
                             <span class="moreDetailsProjects" onclick="loadMinistryWebsite()">Detailed info</span>
                         </div>
+                    </div>
+                    <hr>
+                    <div class="projects-sites">
+                        <div class="quiz-text">
+                            <h3>Team ToDo</h3>
+                            <p>Task management solution built with <strong>C# .NET</strong> featuring multi-level
+                                role-based authorization
+                                (Admin, Team Leader, Employee), DataTables integration for advanced task filtering, and
+                                secure authentication.
+                                Demonstrates full-stack development with database design and team collaboration tools.
+                            </p>
+                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Team-ToDo"><i class="fab fa-github"></i> GitHub</a>
+                            <span class="moreDetailsProjects" onclick="loadTeamToDo()">Detailed info</span>
+                        </div>
+                        <img src="images/projects/Team%20Todo/3.png" width="500" alt="teamToDo" id="teamToDo">
                     </div>
                     <hr>
                     <div class="projects-sites">
@@ -161,6 +168,7 @@
                             <a class="liveDemoLink" target="_blank"
                                 href="https://huggingface.co/spaces/bojan-spasovski/biosecure-iris-demo">🔗 Live
                                 Demo</a>
+                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/BioSecure-Iris-Recognition-System"><i class="fab fa-github"></i> GitHub</a>
                             <span class="moreDetailsProjects" onclick="loadBioSecure()">Detailed info</span>
                         </div>
                         <img src="images/projects/BioSecure/1.png" alt="BioSecure" width="500" id="biosecure">
@@ -169,11 +177,12 @@
                     <div class="projects-sites">
                         <img src="images/projects/eld_plugin/1.jpg" alt="ELD HUD Logs Viewer" width="500" id="eldViewer">
                         <div class="quiz-text">
-                            <h3>ELD HUD Logs Viewer - Chrome Extension <span style="color: #007bff; font-size: 0.85em;">🏢 Industry Project</span></h3>
+                            <h3>ELD HUD Logs Viewer - Chrome Extension <span style="color: #0066cc; font-size: 0.85em;">🏢 Built during Finqup internship</span></h3>
                             <p>Chrome extension for viewing and analyzing Electronic Logging Device (ELD) driver logs with a <strong>HUD (Heads-Up Display) interface</strong>.
                                 Features violation detection for Hours of Service (HOS) compliance, multi-vehicle tracking, draggable modals,
                                 and log comparison metrics. Built with <strong>Vanilla JavaScript</strong> and <strong>Chart.js</strong> using modular architecture.
                             </p>
+                            <span class="privateNote">Source private (internship project)</span>
                             <span class="moreDetailsProjects" onclick="loadELDViewer()">Detailed info</span>
                         </div>
                     </div>
@@ -189,13 +198,13 @@
                             </p>
                             <a class="liveDemoLink" target="_blank"
                                 href="https://spasovskibojan.github.io/Edukativen-Kviz/">🔗 Live Demo</a>
+                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Edukativen-Kviz"><i class="fab fa-github"></i> GitHub</a>
                             <span class="moreDetailsProjects" onclick="loadQuizWebsite()">Detailed info</span>
                         </div>
                         <img src="images/projects/quiz/q1.png" alt="quiz" width="450" id="quiz">
                     </div>
                     
 
-                    <!-- Show Less Button at Bottom -->
                     <div class="show-more-container">
                         <button id="toggleEarlierWorkBottom" class="show-more-btn">
                             <span>Show Less</span>
@@ -223,4 +232,3 @@
 <script src="script.js"></script>
 
 </html>
-<!-- runat server probaj-->

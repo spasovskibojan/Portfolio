@@ -1,9 +1,20 @@
+:root {
+    --text: #2f2f2f;
+    --muted: #666;
+    --accent: #0066cc;
+    --accent-dark: #0052a3;
+    --accent-on-dark: #69b3fe;
+    --surface: #e8e8e8;
+    --font: 'Inter', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font);
+    color: var(--text);
     margin: 0;
     padding: 0;
     overflow-y: scroll;
@@ -41,7 +52,6 @@ body {
     color: white;
     text-decoration: none;
     display: block;
-    /* see this and next line*/
     padding: 8px 16px;
 }
 
@@ -60,7 +70,7 @@ body {
 }
 
 .navbar .nav-right li a {
-    color: #69b3fe;
+    color: var(--accent-on-dark);
 }
 
 .nav-right {
@@ -126,14 +136,14 @@ body {
 }
 
 .main-right .biography h1 {
-    font-size: 50px;
-    font-weight: 500;
-    font-family: fangsong;
+    font-size: 40px;
+    font-weight: 600;
     margin: 0;
 }
 
 .main-right .biography p {
     font-size: 20px;
+    line-height: 1.6;
     text-align: justify;
 }
 
@@ -184,7 +194,6 @@ body {
 .main-info .main-left p:nth-of-type(2) {
     font-size: 25px;
     color: gray;
-    font-family: monospace;
     margin: 0;
 }
 
@@ -194,12 +203,12 @@ abbr {
 
 .main-info .main-left p a {
     text-decoration: none;
-    color: #69b3fe;
+    color: var(--accent);
     font-size: 20px;
 }
 
 i.fab {
-    color: #69b3fe;
+    color: var(--accent);
 }
 
 /* Skills */
@@ -212,9 +221,9 @@ i.fab {
 }
 
 .skills h1 {
-    font-weight: 300;
-    font-size: 50px;
-    color: #210404;
+    font-weight: 600;
+    font-size: 40px;
+    color: #2f2f2f;
 }
 
 .skills .skillList {
@@ -228,70 +237,110 @@ i.fab {
 
 .skills .skillList i {
     font-size: 50px;
-    color: #69b3fe;
+    color: var(--accent);
 }
 
 /* Contact */
 
 #contact {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
+    --form-max-width: 720px;
+    --form-padding: 40px;
+    max-width: var(--form-max-width);
+    width: calc(100% - 32px);
+    margin: 60px auto;
+    padding: var(--form-padding);
     background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #contact h1 {
-    margin: 0;
-    font-size: 50px;
-    font-weight: 300;
+    margin: 0 0 10px;
+    font-size: 40px;
+    font-weight: 600;
 }
 
-#contact p {
+#contact > p {
     font-size: 1.1em;
-    margin-bottom: 20px;
+    color: var(--muted);
+    margin: 0 0 30px;
     text-align: center;
 }
 
+#contact-form {
+    width: 100%;
+}
+
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
 
 .form-group label {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    font-weight: 500;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px 14px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-family: inherit;
     font-size: 1em;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
 }
 
 #contact button {
-    padding: 10px 20px;
-    outline: #69b3fe solid;
-    color: #69b3fe;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-#contact button:hover {
-    background-color: #69b3fe;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--accent);
     color: #fff;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
 }
 
-/* Contact Page Redesign */
+#contact button:hover:not(:disabled) {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+#contact button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#form-status {
+    min-height: 1.4em;
+    margin: 15px 0 0;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* Contact Page */
 .contact-page-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -304,7 +353,7 @@ i.fab {
 }
 
 .contact-header h1 {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 600;
     color: #2f2f2f;
     margin-bottom: 15px;
@@ -447,10 +496,6 @@ i.fab {
     background-color: #1877f2;
 }
 
-.social-btn.twitter {
-    background-color: #1da1f2;
-}
-
 .social-btn.instagram {
     background-color: #e1306c;
 }
@@ -475,7 +520,7 @@ i.fab {
     overflow: hidden;
 }
 
-/* Responsive Design for Contact Page */
+/* Contact Page Responsive */
 @media (max-width: 768px) {
     .contact-header h1 {
         font-size: 32px;
@@ -516,23 +561,19 @@ i.fab {
 .address ul li {
     display: flex;
     align-items: center;
-    /* Vertically center content */
     margin-bottom: 30px;
-    /* Space between rows */
 }
 
 .address ul li span {
     margin-left: 15px;
-    /* Space between icon and text */
     font-size: 18px;
 }
 
 .address i {
     font-size: 32px;
     width: 40px;
-    /* Fixed width for alignment */
     text-align: center;
-    color: #313131;
+    color: #2f2f2f;
 }
 
 .address iframe#map {
@@ -588,7 +629,7 @@ html {
 }
 
 .imgs {
-    border: 2px solid #313131;
+    border: 2px solid #2f2f2f;
     box-shadow: black;
     border-radius: 20px;
 }
@@ -597,11 +638,12 @@ html {
     font-size: 30px;
     font-weight: 500;
     margin: 0;
-    color: #313131;
+    color: #2f2f2f;
 }
 
 .bio p {
     font-size: 20px;
+    line-height: 1.6;
 }
 
 /* Footer */
@@ -609,7 +651,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
-    background-color: #313131;
+    background-color: #2f2f2f;
     color: #fff;
     position: relative;
     bottom: 0;
@@ -630,7 +672,7 @@ footer p {
 
 .companies {
     margin-bottom: 80px;
-    color: #313131;
+    color: #2f2f2f;
     background-color: #e8e8e8;
     text-align: center;
 }
@@ -687,6 +729,34 @@ footer p {
     box-shadow: 0 2px 6px rgba(0, 102, 204, 0.2);
 }
 
+.githubLink {
+    display: inline-block;
+    background-color: #fff;
+    color: var(--accent) !important;
+    border: 2px solid var(--accent);
+    padding: 8px 18px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.githubLink:hover {
+    background-color: var(--accent);
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.privateNote {
+    display: inline-block;
+    margin-right: 15px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
 .liveDemoLink:hover {
     background-color: #0052a3;
     transform: translateY(-2px);
@@ -721,7 +791,7 @@ footer p {
     font-size: 40px;
     font-weight: 500;
     margin: 0;
-    color: #313131;
+    color: #2f2f2f;
     text-transform: uppercase;
     margin-bottom: 80px;
 }
@@ -732,7 +802,7 @@ footer p {
 }
 
 .projects-header h1 {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 600;
     color: #2f2f2f;
     margin-bottom: 15px;
@@ -829,7 +899,7 @@ footer p {
     font-size: 30px;
     font-weight: 500;
     margin: 0;
-    color: #313131;
+    color: #2f2f2f;
 }
 
 /* Deployment Notice Box */
@@ -857,6 +927,7 @@ footer p {
 
 .projects-sites p {
     font-size: 20px;
+    line-height: 1.6;
     text-align: justify;
 }
 
@@ -874,7 +945,7 @@ footer p {
 }
 
 .dropdown-content a {
-    color: #69b3fe;
+    color: var(--accent-on-dark);
     padding: 8px 16px;
     text-decoration: none;
     display: block;
@@ -969,7 +1040,8 @@ footer p {
     }
 
     #contact {
-        padding: 10px;
+        --form-padding: 20px;
+        margin: 30px auto;
     }
 }
 
@@ -1012,7 +1084,7 @@ footer p {
 
 .project-overview h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #2f2f2f;
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -1027,7 +1099,7 @@ footer p {
 /* Key Features Section */
 .project-overview h2 {
     font-size: 1.75rem;
-    color: #333;
+    color: #2f2f2f;
     margin-bottom: 15px;
     font-weight: 500;
 }
@@ -1058,7 +1130,7 @@ footer p {
 
 .page h3 {
     font-size: 1.6rem;
-    color: #333;
+    color: #2f2f2f;
     margin-bottom: 12px;
     font-weight: 500;
 }
