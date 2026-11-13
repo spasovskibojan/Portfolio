@@ -67,6 +67,74 @@ if (contactForm) {
 }
 
 // Work script
+function loadDocuBrain() {
+    var firstStatePage = document.getElementById('workPageContainer');
+    firstStatePage.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    var singleProject = document.getElementById('singleProjectPart');
+    singleProject.innerHTML = `
+        <div class="portfolio-container">
+            <div id="goBackBtn" onclick="goToWorkPage()">< Work</div>
+            <section class="project-overview">
+                <h1>DocuBrain - RAG Document Assistant</h1>
+                <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/DocuBrain"><i class="fab fa-github"></i> View source on GitHub</a></p>
+                <p>DocuBrain lets users upload PDFs, chat with them, extract invoice data and compare documents. Every answer is grounded in the user's own documents and cites the exact passages it came from. I built the full system: the retrieval pipeline, the backend API, the React frontend, and the Docker, Kubernetes and CI/CD setup around it.</p>
+                <img src="images/projects/docubrain/6.png" alt="DocuBrain chat with citations">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Hybrid Search:</strong> Every chunk is stored in Qdrant with a dense MiniLM embedding and a BM25 sparse vector. Dense search finds passages by meaning, BM25 finds exact terms like invoice numbers and company names. Both run in one query and are merged with Reciprocal Rank Fusion before a cross-encoder picks the final five passages.</li>
+                    <li><strong>Grounded Answers with Citations:</strong> Answers carry inline [n] citations that link to the source passage with its file name and page. If nothing relevant is found, the assistant says so instead of answering from general knowledge.</li>
+                    <li><strong>Self-Correcting Retrieval:</strong> A LangGraph pipeline checks the reranker score. When the best passage scores below a threshold, it rewrites the query once and searches again before generating.</li>
+                    <li><strong>Conversation Memory:</strong> Follow-up questions are rewritten into standalone questions using the chat history, and requests like "make it shorter" reformat the previous answer without a new search.</li>
+                    <li><strong>Structured Extraction:</strong> The invoice extractor returns vendor, date, total and tax as JSON validated by a Pydantic schema. Invalid output is sent back to the model with the validation error for one retry.</li>
+                    <li><strong>Multi-User Isolation:</strong> JWT authentication, a separate vector collection per user, per-user rate limiting on AI endpoints and a Redis answer cache that is invalidated when the user's documents change.</li>
+                    <li><strong>Production Setup:</strong> Alembic migrations under a Postgres advisory lock for safe multi-replica startup, models baked into the Docker image, readiness probes, Langfuse tracing of every request, and 35 automated tests that run in GitHub Actions on every push.</li>
+                </ul>
+                <p>The focus of this project was retrieval quality and reliability, not just a working demo. Each design choice addresses a concrete failure: BM25 for exact identifiers that embeddings miss, document titles in the search text so a question about "the 2025 agreement" finds clauses that never mention the year, and passages grouped by document so the model does not mix facts between two similar contracts.</p>
+            </section>
+
+            <section class="page-overview">
+                <h2>Features Overview</h2>
+                <div class="page">
+                    <h3>Document Chat with Citations</h3>
+                    <img src="images/projects/docubrain/1.png" alt="Document Chat" class="page-image">
+                    <p>Ask questions across all documents or scope the chat to a single one. Each [n] citation opens the source passage with its file name and page number, so every claim can be checked.</p>
+                </div>
+                <div class="page">
+                    <h3>Invoice Extractor</h3>
+                    <img src="images/projects/docubrain/3.png" alt="Invoice Extractor" class="page-image">
+                    <p>Extracts vendor, date, total and tax from an invoice, with export to CSV. The model's JSON output is validated against a Pydantic schema, and invalid results are corrected through one retry with the validation error.</p>
+                </div>
+                <div class="page">
+                    <h3>Compare Documents</h3>
+                    <img src="images/projects/docubrain/4.png" alt="Compare Documents" class="page-image">
+                    <p>Lists what changed between two documents, such as two versions of a contract, referring to each by its file name.</p>
+                </div>
+                <div class="page">
+                    <h3>Executive Brief</h3>
+                    <img src="images/projects/docubrain/5.png" alt="Executive Brief" class="page-image">
+                    <p>Produces a three-point summary of a document.</p>
+                </div>
+
+                <div class="code-look page">
+                    <h3>Technology Stack & Architecture</h3>
+                    <ul>
+                        <li><strong>Backend:</strong> FastAPI, async SQLAlchemy 2, asyncpg, Alembic, Pydantic v2</li>
+                        <li><strong>AI Pipeline:</strong> LangGraph, LangChain, Groq (gpt-oss-120b for answers and workflows, gpt-oss-20b for query rewriting)</li>
+                        <li><strong>Retrieval:</strong> Qdrant hybrid search (dense + BM25, RRF), Sentence Transformers all-MiniLM-L6-v2, ms-marco-MiniLM-L-6-v2 cross-encoder</li>
+                        <li><strong>Data:</strong> PostgreSQL 16, Redis 7</li>
+                        <li><strong>Observability:</strong> Langfuse tracing (pipeline steps, prompts, latency, token usage)</li>
+                        <li><strong>Frontend:</strong> React 19, Vite, React Router, React Bootstrap</li>
+                        <li><strong>Infrastructure:</strong> Docker Compose, Kubernetes (k3d) with Traefik Ingress, nginx, GitHub Actions CI/CD</li>
+                    </ul>
+                    <a target="_blank" href="https://github.com/spasovskibojan/DocuBrain">Source code and setup instructions on GitHub</a>
+                </div>
+            </section>
+        </div>
+    `;
+}
+
 function loadEmailAuto() {
     var firstStatePage = document.getElementById('workPageContainer');
     firstStatePage.innerHTML = "";

@@ -151,6 +151,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 40px;
 }
 
 .main-right-bottom .interests {
@@ -632,6 +633,9 @@ html {
     border: 2px solid #2f2f2f;
     box-shadow: black;
     border-radius: 20px;
+    align-self: center;
+    height: auto;
+    max-width: 100%;
 }
 
 .bio h2 {
