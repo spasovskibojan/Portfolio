@@ -1,0 +1,28 @@
+warning: in the working copy of 'contact.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/contact.html b/contact.html[m
+[1mindex 37b54f3..0378870 100644[m
+[1m--- a/contact.html[m
+[1m+++ b/contact.html[m
+[36m@@ -85,7 +85,7 @@[m
+                         <i class="fab fa-github"></i>[m
+                         <span>GitHub</span>[m
+                     </a>[m
+[31m-                    <a href="https://www.linkedin.com/in/bojan-spasovski-a3a403293/" target="_blank"[m
+[32m+[m[32m                    <a href="https://www.linkedin.com/in/bojan-spasovski-mk2004/" target="_blank"[m
+                         class="social-btn linkedin">[m
+                         <i class="fab fa-linkedin-in"></i>[m
+                         <span>LinkedIn</span>[m
+[1mdiff --git a/index.html b/index.html[m
+[1mindex c2ed603..d7b6d62 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -51,7 +51,7 @@[m
+             <p><a href="https://finki.ukim.mk/mk" target="_blank"><abbr title="FINKI">Faculty of Computer Science and[m
+                         Engineering</abbr></a></p>[m
+             <div class="social-icons">[m
+[31m-                <a href="https://www.linkedin.com/in/bojan-spasovski-a3a403293/" target="_blank"><i[m
+[32m+[m[32m                <a href="https://www.linkedin.com/in/bojan-spasovski-mk2004/" target="_blank"><i[m
+                         class="fab fa-linkedin-in"></i></a>[m
+                 <a href="https://github.com/spasovskibojan" target="_blank"><i class="fab fa-github"></i></a>[m
+                 <a href="https://www.facebook.com/bojan.spasovski04?locale=mk_MK" target="_blank"><i[m
