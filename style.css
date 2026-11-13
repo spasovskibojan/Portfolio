@@ -570,6 +570,10 @@ i.fab {
     font-size: 18px;
 }
 
+.address ul li span a {
+    color: inherit;
+}
+
 .address i {
     font-size: 32px;
     width: 40px;
