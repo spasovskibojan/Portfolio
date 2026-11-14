@@ -67,6 +67,19 @@ if (contactForm) {
 }
 
 // Work script
+const DOCUBRAIN_VIDEO_ID = 'wchX_p2Vv1s';
+
+// YouTube refuses embedded playback on file:// pages (Error 153), so link out instead.
+function docuBrainVideoMarkup() {
+    if (location.protocol === 'file:') {
+        return `<a class="video-fallback" target="_blank" href="https://www.youtube.com/watch?v=${DOCUBRAIN_VIDEO_ID}">
+                    <img class="project-video" src="https://img.youtube.com/vi/${DOCUBRAIN_VIDEO_ID}/maxresdefault.jpg" alt="Watch the DocuBrain demo on YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>`;
+    }
+    return `<iframe class="project-video" src="https://www.youtube.com/embed/${DOCUBRAIN_VIDEO_ID}?rel=0" title="DocuBrain demo video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+}
+
 function loadDocuBrain() {
     var firstStatePage = document.getElementById('workPageContainer');
     firstStatePage.innerHTML = "";
@@ -80,7 +93,7 @@ function loadDocuBrain() {
                 <h1>DocuBrain - RAG Document Assistant</h1>
                 <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/DocuBrain"><i class="fab fa-github"></i> View source on GitHub</a></p>
                 <p>DocuBrain lets users upload PDFs, chat with them, extract invoice data and compare documents. Every answer is grounded in the user's own documents and cites the exact passages it came from. I built the full system: the retrieval pipeline, the backend API, the React frontend, and the Docker, Kubernetes and CI/CD setup around it.</p>
-                <img src="images/projects/docubrain/6.png" alt="DocuBrain chat with citations">
+                ${docuBrainVideoMarkup()}
                 <h2>Key Features</h2>
                 <ul>
                     <li><strong>Hybrid Search:</strong> Every chunk is stored in Qdrant with a dense MiniLM embedding and a BM25 sparse vector. Dense search finds passages by meaning, BM25 finds exact terms like invoice numbers and company names. Both run in one query and are merged with Reciprocal Rank Fusion before a cross-encoder picks the final five passages.</li>
@@ -98,7 +111,7 @@ function loadDocuBrain() {
                 <h2>Features Overview</h2>
                 <div class="page">
                     <h3>Document Chat with Citations</h3>
-                    <img src="images/projects/docubrain/1.png" alt="Document Chat" class="page-image">
+                    <img src="images/projects/docubrain/6.png" alt="Document Chat with Citations" class="page-image">
                     <p>Ask questions across all documents or scope the chat to a single one. Each [n] citation opens the source passage with its file name and page number, so every claim can be checked.</p>
                 </div>
                 <div class="page">

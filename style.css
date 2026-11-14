@@ -1169,6 +1169,39 @@ footer p {
     width: 750px;
 }
 
+.portfolio-container .project-video {
+    display: block;
+    margin: 0 auto 20px;
+    width: 750px;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.video-fallback {
+    position: relative;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 20px;
+}
+
+.video-fallback .project-video {
+    margin-bottom: 0;
+}
+
+.video-fallback i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 72px;
+    color: #ff0000;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+}
+
 #goBackBtn {
     background-color: rgba(171, 171, 171, 0.42);
     display: inline-block;
