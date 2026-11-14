@@ -67,7 +67,7 @@ if (contactForm) {
 }
 
 // Work script
-const DOCUBRAIN_VIDEO_ID = 'wchX_p2Vv1s';
+const DOCUBRAIN_VIDEO_ID = 'r9romrPRgfE';
 
 // YouTube refuses embedded playback on file:// pages (Error 153), so link out instead.
 function docuBrainVideoMarkup() {
@@ -77,7 +77,7 @@ function docuBrainVideoMarkup() {
                     <i class="fab fa-youtube"></i>
                 </a>`;
     }
-    return `<iframe class="project-video" src="https://www.youtube.com/embed/${DOCUBRAIN_VIDEO_ID}?rel=0" title="DocuBrain demo video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+    return `<iframe class="project-video" src="https://www.youtube.com/embed/${DOCUBRAIN_VIDEO_ID}?rel=0&autoplay=1&mute=1&playsinline=1" title="DocuBrain demo video" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 }
 
 function loadDocuBrain() {
