@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Projects | Bojan Spasovski, Full-Stack &amp; AI Engineer</title>
-    <meta name="description" content="Projects by Bojan Spasovski: RAG systems, AI agents and full-stack web applications built with Python, FastAPI, Django and React.">
+    <meta name="description"
+        content="Projects by Bojan Spasovski: RAG systems, AI agents and full-stack web applications built with Python, FastAPI, Django and React.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Projects | Bojan Spasovski, Full-Stack &amp; AI Engineer">
-    <meta property="og:description" content="Projects by Bojan Spasovski: RAG systems, AI agents and full-stack web applications built with Python, FastAPI, Django and React.">
+    <meta property="og:description"
+        content="Projects by Bojan Spasovski: RAG systems, AI agents and full-stack web applications built with Python, FastAPI, Django and React.">
     <meta property="og:url" content="https://spasovskibojan.github.io/Portfolio/work.html">
     <meta property="og:image" content="https://spasovskibojan.github.io/Portfolio/images/all/Profilna.jpeg">
     <meta name="twitter:card" content="summary">
@@ -52,28 +54,35 @@
                 <div class="projects-sites">
                     <div class="quiz-text">
                         <h3>DocuBrain - RAG Document Assistant</h3>
-                        <p>Chat with your PDFs and get answers that cite the exact passage, file and page they came from.
-                            Built with <strong>FastAPI</strong>, <strong>LangGraph</strong> and <strong>React</strong>, using
-                            <strong>hybrid search</strong> (dense embeddings + BM25 in Qdrant, merged with RRF), a cross-encoder
-                            reranker and a self-correcting retrieval loop. Includes invoice extraction to validated JSON,
-                            document comparison, and runs on <strong>Docker</strong> and <strong>Kubernetes</strong> with CI/CD.
+                        <p>Chat with your PDFs and get answers that cite the exact passage, file and page they came
+                            from.
+                            Built with <strong>FastAPI</strong>, <strong>LangGraph</strong> and <strong>React</strong>,
+                            using
+                            <strong>hybrid search</strong> (dense embeddings + BM25 in Qdrant, merged with RRF), a
+                            cross-encoder
+                            reranker and a self-correcting retrieval loop. Includes invoice extraction to validated
+                            JSON,
+                            document comparison, and runs on <strong>Docker</strong> and <strong>Kubernetes</strong>
+                            with CI/CD.
                         </p>
-                        <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/DocuBrain"><i class="fab fa-github"></i> GitHub</a>
+                        <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/DocuBrain"><i
+                                class="fab fa-github"></i> GitHub</a>
                         <span class="moreDetailsProjects" onclick="loadDocuBrain()">Detailed info</span>
                     </div>
-                    <img src="images/projects/docubrain/2.png" width="500px" alt="DocuBrain"
-                        id="docuBrain">
+                    <img src="images/projects/docubrain/2.png" width="500px" alt="DocuBrain" id="docuBrain">
                 </div>
                 <hr>
                 <div class="projects-sites">
                     <img src="images/projects/emailauto/company_dashboard.png" width="500px" alt="EmailAuto AI Platform"
                         id="emailAuto">
                     <div class="quiz-text">
-                        <h3>EmailAuto - AI Email Automation <span style="color: #0066cc; font-size: 0.85em;">🏢 Built during Finqup internship</span></h3>
-                        <p>AI email automation platform with <strong>multi-agent cognitive architecture</strong>.
-                            Features specialized AI agents (Classifier → Reasoner → Writer) for context-aware responses,
-                            <strong>RAG-powered knowledge base</strong>, and dual-mode operation (Personal/Company).
-                            Built from scratch using <strong>Gemini API</strong> with advanced prompt engineering techniques.
+                        <h3>EmailAuto - AI Email Automation <span style="color: #0066cc; font-size: 0.85em;">🏢 Built
+                                during Finqup internship</span></h3>
+                        <p>AI email automation platform where three agents (Classifier → Reasoner → Writer) classify
+                            incoming emails, reason about them and draft replies, using the <strong>Gemini API</strong>.
+                            Each department has its own <strong>RAG knowledge base</strong>, and a criticality score
+                            blocks
+                            automatic replies on sensitive emails. Works for personal and company inboxes.
                         </p>
                         <span class="privateNote">Source private (internship project)</span>
                         <span class="moreDetailsProjects" onclick="loadEmailAuto()">Detailed info</span>
@@ -84,61 +93,50 @@
                     <div class="quiz-text">
                         <h3>Smart Routing App</h3>
                         <p>Full-stack route optimization platform using <strong>React</strong> and
-                            <strong>Django</strong> that finds the best order of stops through the OpenRouteService optimization API.
+                            <strong>Django</strong> that finds the best order of stops through the OpenRouteService
+                            optimization API.
                             Features interactive OpenStreetMap interface, multi-modal transportation (car, bicycle,
                             walking), JWT authentication,
-                            and turn-by-turn navigation. Deployed on Render with PostgreSQL database.
+                            and turn-by-turn navigation. Deployed on Render with a PostgreSQL database.
                         </p>
                         <a class="liveDemoLink" target="_blank" href="https://smart-routing-app-1.onrender.com/">🔗 Live
                             Demo</a>
-                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Smart-routing-app"><i class="fab fa-github"></i> GitHub</a>
+                        <a class="githubLink" target="_blank"
+                            href="https://github.com/spasovskibojan/Smart-routing-app"><i class="fab fa-github"></i>
+                            GitHub</a>
                         <span class="moreDetailsProjects" onclick="loadSmartRoutingApp()">Detailed info</span>
+                        <span class="privateNote">Free hosting: first load may take up to a minute.</span>
                     </div>
                     <img src="images/projects/Smart_Routing_App/1.png" width="500px" alt="Smart Routing App"
                         id="smartRoutingApp">
                 </div>
                 <hr>
-                
-                
-                <div class="projects-sites">
-                    <img src="images/projects/crypto/1.png" width="500px" alt="CryptoAnalysis"
-                        id="cryptoAnalysis">
-                    <div class="quiz-text">
-                        <h3>CryptoAnalysis Platform</h3>
-                        <p>Full-stack cryptocurrency analysis platform using <strong>Django</strong>, <strong>FastAPI</strong> microservices, and <strong>LSTM neural networks</strong>.
-                            Features real-time market data, 9 technical indicators, AI-powered price predictions, sentiment analysis with NLP,
-                            and on-chain metrics. Demonstrates microservices architecture with intelligent service management for cost-optimized cloud deployment.
-                        </p>
-                        <a class="liveDemoLink" target="_blank" href="https://cryptoanalysis-web.onrender.com/">🔗 Live
-                            Demo</a>
-                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/CryptoAnalysis"><i class="fab fa-github"></i> GitHub</a>
-                        <span class="moreDetailsProjects" onclick="loadCryptoAnalysis()">Detailed info</span>
-                    </div>
-                </div>
-                <hr>
+
+
 
                 <div class="projects-sites">
+                    <img src="images/projects/AI_Resume_Platform/1.png" width="500px" height="340px"
+                        alt="AI Resume Platform" id="aiResumePlatform">
                     <div class="quiz-text">
                         <h3>AI Resume & Career Platform</h3>
                         <p>AI-powered platform using <strong>Python</strong> and <strong>Streamlit</strong> with Meta's
                             Llama 3.3 70B via Groq API.
                             Combines Resume Analyzer and AI Career Coach features, providing instant match scores,
                             keyword analysis,
-                            and personalized interview preparation. Showcases AI integration, NLP, and PDF parsing
-                            expertise.
+                            and personalized interview preparation from an uploaded PDF resume.
                         </p>
                         <a class="liveDemoLink" target="_blank" href="https://resume-career-platform.streamlit.app/">🔗
                             Live Demo</a>
-                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Resume-Career-Platform"><i class="fab fa-github"></i> GitHub</a>
+                        <a class="githubLink" target="_blank"
+                            href="https://github.com/spasovskibojan/Resume-Career-Platform"><i
+                                class="fab fa-github"></i> GitHub</a>
                         <span class="moreDetailsProjects" onclick="loadAIResumePlatform()">Detailed info</span>
                     </div>
-                    <img src="images/projects/AI_Resume_Platform/1.png" width="500px" height="340px"
-                        alt="AI Resume Platform" id="aiResumePlatform">
                 </div>
                 <hr>
 
-                                
-                
+
+
 
                 <div class="show-more-container">
                     <button id="toggleEarlierWork" class="show-more-btn">
@@ -149,18 +147,37 @@
 
                 <div id="earlierWorkSection" class="earlier-work-section">
                     <div class="projects-sites">
-                        <img src="images/projects/ministry/ministry1.png" alt="Ministry of Finance" width="450" id="ministry">
+                        <div class="quiz-text">
+                            <h3>CryptoAnalysis Platform</h3>
+                            <p>Full-stack cryptocurrency analysis platform using <strong>Django</strong>,
+                                <strong>FastAPI</strong> microservices, and <strong>LSTM neural networks</strong>.
+                                Features real-time market data, 9 technical indicators, AI-powered price predictions,
+                                sentiment analysis with NLP,
+                                and on-chain metrics. Split into microservices that run on free cloud tiers.
+                            </p>
+                            <a class="githubLink" target="_blank"
+                                href="https://github.com/spasovskibojan/CryptoAnalysis"><i class="fab fa-github"></i>
+                                GitHub</a>
+                            <span class="moreDetailsProjects" onclick="loadCryptoAnalysis()">Detailed info</span>
+                        </div>
+                        <img src="images/projects/crypto/1.png" width="500px" alt="CryptoAnalysis" id="cryptoAnalysis">
+                    </div>
+                    <hr>
+                    <div class="projects-sites">
+                        <img src="images/projects/ministry/ministry1.png" alt="Ministry of Finance" width="450"
+                            id="ministry">
                         <div class="quiz-text">
                             <h3>Ministry of Finance Website</h3>
                             <p>Fully responsive government website using <strong>React</strong> and
                                 <strong>Firebase</strong> with multilingual support (Macedonian/English).
-                                Features Firebase Authentication, dynamic job listings with real-time updates, and
-                                comprehensive ministry information.
-                                Showcases modern web design principles and scalable architecture.
+                                Features Firebase Authentication, job listings that update in real time, and
+                                pages for the ministry's news and services.
                             </p>
                             <a class="liveDemoLink" target="_blank" href="https://ministryoffinancemk.web.app/">🔗 Live
                                 Demo</a>
-                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/ministry-of-finance-mk"><i class="fab fa-github"></i> GitHub</a>
+                            <a class="githubLink" target="_blank"
+                                href="https://github.com/spasovskibojan/ministry-of-finance-mk"><i
+                                    class="fab fa-github"></i> GitHub</a>
                             <span class="moreDetailsProjects" onclick="loadMinistryWebsite()">Detailed info</span>
                         </div>
                     </div>
@@ -171,62 +188,71 @@
                             <p>Task management solution built with <strong>C# .NET</strong> featuring multi-level
                                 role-based authorization
                                 (Admin, Team Leader, Employee), DataTables integration for advanced task filtering, and
-                                secure authentication.
-                                Demonstrates full-stack development with database design and team collaboration tools.
+                                authentication.
                             </p>
-                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Team-ToDo"><i class="fab fa-github"></i> GitHub</a>
+                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Team-ToDo"><i
+                                    class="fab fa-github"></i> GitHub</a>
                             <span class="moreDetailsProjects" onclick="loadTeamToDo()">Detailed info</span>
                         </div>
                         <img src="images/projects/Team%20Todo/3.png" width="500" alt="teamToDo" id="teamToDo">
                     </div>
                     <hr>
                     <div class="projects-sites">
+                        <img src="images/projects/BioSecure/1.png" alt="BioSecure" width="500" id="biosecure">
                         <div class="quiz-text">
                             <h3>BioSecure - Iris Recognition</h3>
-                            <p>Biometric authentication system engineered for high-accuracy iris
-                                recognition using <strong>Python</strong> and <strong>OpenCV</strong>.
+                            <p>Biometric authentication system that identifies people by their iris,
+                                built using <strong>Python</strong> and <strong>OpenCV</strong>.
                                 Features a multi-stage pipeline with automated segmentation, hybrid feature extraction
                                 (Gabor/LBP), and real-time identity matching via Cosine Similarity.
                             </p>
                             <a class="liveDemoLink" target="_blank"
                                 href="https://huggingface.co/spaces/bojan-spasovski/biosecure-iris-demo">🔗 Live
                                 Demo</a>
-                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/BioSecure-Iris-Recognition-System"><i class="fab fa-github"></i> GitHub</a>
+                            <a class="githubLink" target="_blank"
+                                href="https://github.com/spasovskibojan/BioSecure-Iris-Recognition-System"><i
+                                    class="fab fa-github"></i> GitHub</a>
                             <span class="moreDetailsProjects" onclick="loadBioSecure()">Detailed info</span>
                         </div>
-                        <img src="images/projects/BioSecure/1.png" alt="BioSecure" width="500" id="biosecure">
                     </div>
                     <hr>
                     <div class="projects-sites">
-                        <img src="images/projects/eld_plugin/1.jpg" alt="ELD HUD Logs Viewer" width="500" id="eldViewer">
                         <div class="quiz-text">
-                            <h3>ELD HUD Logs Viewer - Chrome Extension <span style="color: #0066cc; font-size: 0.85em;">🏢 Built during Finqup internship</span></h3>
-                            <p>Chrome extension for viewing and analyzing Electronic Logging Device (ELD) driver logs with a <strong>HUD (Heads-Up Display) interface</strong>.
-                                Features violation detection for Hours of Service (HOS) compliance, multi-vehicle tracking, draggable modals,
-                                and log comparison metrics. Built with <strong>Vanilla JavaScript</strong> and <strong>Chart.js</strong> using modular architecture.
+                            <h3>ELD HUD Logs Viewer - Chrome Extension <span
+                                    style="color: #0066cc; font-size: 0.85em;">🏢 Built during Finqup internship</span>
+                            </h3>
+                            <p>Chrome extension for viewing and analyzing Electronic Logging Device (ELD) driver logs
+                                with a <strong>HUD (Heads-Up Display) interface</strong>.
+                                Features violation detection for Hours of Service (HOS) compliance, multi-vehicle
+                                tracking, draggable modals,
+                                and log comparison metrics. Built with <strong>Vanilla JavaScript</strong> and
+                                <strong>Chart.js</strong> using modular architecture.
                             </p>
                             <span class="privateNote">Source private (internship project)</span>
                             <span class="moreDetailsProjects" onclick="loadELDViewer()">Detailed info</span>
                         </div>
+                        <img src="images/projects/eld_plugin/1.jpg" alt="ELD HUD Logs Viewer" width="500"
+                            id="eldViewer">
                     </div>
                     <hr>
                     <div class="projects-sites">
+                        <img src="images/projects/quiz/q1.png" alt="quiz" width="450" id="quiz">
                         <div class="quiz-text">
                             <h3>Educational Quiz</h3>
                             <p>Interactive educational platform for natural science subjects (Geography, Biology, Maths,
                                 Chemistry, Physics).
                                 Features personalized 20-question quizzes, real-time score tracking, and answer review
                                 functionality.
-                                Demonstrates front-end web development and user experience design skills.
                             </p>
                             <a class="liveDemoLink" target="_blank"
                                 href="https://spasovskibojan.github.io/Edukativen-Kviz/">🔗 Live Demo</a>
-                            <a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Edukativen-Kviz"><i class="fab fa-github"></i> GitHub</a>
+                            <a class="githubLink" target="_blank"
+                                href="https://github.com/spasovskibojan/Edukativen-Kviz"><i class="fab fa-github"></i>
+                                GitHub</a>
                             <span class="moreDetailsProjects" onclick="loadQuizWebsite()">Detailed info</span>
                         </div>
-                        <img src="images/projects/quiz/q1.png" alt="quiz" width="450" id="quiz">
                     </div>
-                    
+
 
                     <div class="show-more-container">
                         <button id="toggleEarlierWorkBottom" class="show-more-btn">

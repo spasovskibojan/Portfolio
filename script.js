@@ -241,7 +241,7 @@ function loadEmailAuto() {
                         <li>Built a system that keeps <strong>department data separate</strong> and secure.</li>
                         <li>Implemented <strong>Thread-Aware Routing</strong> to maintain conversation context.</li>
                     </ul>
-                    <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship as a prototype for a real company use case (I have approval to include it in my portfolio). A recorded walkthrough is available on request.</em></p>
+                    <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship as a prototype for a real company use case (I have approval to include it in my portfolio).</em></p>
                 </div>
             </section>
         </div>
@@ -290,7 +290,7 @@ function loadELDViewer() {
                 <div class="page">
                     <h3>Advanced Features</h3>
                     <img src="images/projects/eld_plugin/4.jpg" alt="Suggested Solutions Modal" class="page-image">
-                    <p>Additional tools that make the extension powerful:</p>
+                    <p>Additional tools in the extension:</p>
                     <ul>
                         <li><strong>Log Comparison Tool:</strong> Shows which day had the least driving time, calculates 70-hour cycle usage, and displays recap hours.</li>
                         <li><strong>Draggable Modals:</strong> All popup windows can be moved around the screen and locked in place.</li>
@@ -315,7 +315,7 @@ function loadELDViewer() {
                         <li>Designed a clean <strong>HUD interface</strong> that makes complex log data easy to understand.</li>
                         <li>Used <strong>Chrome Extension APIs</strong> for side panel integration and background tasks.</li>
                     </ul>
-                    <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship (I have approval to include it in my portfolio). It demonstrates my ability to build Chrome extensions and work with domain-specific requirements in the transportation industry.</em></p>
+                    <p style="margin-top: 20px;"><em>Note: This project was developed during my Finqup internship (I have approval to include it in my portfolio).</em></p>
                 </div>
             </section>
         </div>
@@ -334,7 +334,7 @@ function loadSmartRoutingApp() {
             <section class="project-overview">
                 <h1>Smart Routing App - Route Optimization Platform</h1>
                 <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Smart-routing-app"><i class="fab fa-github"></i> View source on GitHub</a></p>
-                <p>I designed and developed a comprehensive route optimization web application that revolutionizes trip planning through intelligent algorithms and modern web technologies. This full-stack solution combines React, Django, and the Travelling Salesman Algorithm to provide users with the most efficient paths between multiple destinations, supporting various transportation modes and route types.</p>
+                <p>A route planner built with React and Django. The user enters several stops, and the app finds the best order to visit them using the OpenRouteService optimization API (a Travelling Salesman solver), then shows turn-by-turn directions for car, bicycle or walking.</p>
                 <img src="images/projects/Smart_Routing_App/1.png" alt="Smart Routing App Main Interface">
                 <h2>Key Features</h2>
                 <ul>
@@ -346,7 +346,7 @@ function loadSmartRoutingApp() {
                     <li><strong>Route Management:</strong> Save routes with custom names, load previously saved routes, and import locations from CSV files (format: title, lng, lat).</li>
                     <li><strong>Real-Time Route Visualization:</strong> Drag and drop waypoints to adjust routes dynamically, with real-time updates on the map.</li>
                 </ul>
-                <p>This project demonstrates my expertise in <strong>Django REST Framework</strong>, <strong>React</strong>, and <strong>external API integration</strong>. The seamless integration of OpenStreetMap, OpenCage Data, and OpenRouteService APIs showcases my ability to build complex, real-world applications that solve practical problems efficiently.</p>
+                <p>The backend is a <strong>Django REST Framework</strong> API and the frontend is <strong>React</strong>. Addresses are geocoded with OpenCage Data, the map comes from OpenStreetMap, and routes are calculated with OpenRouteService.</p>
             </section>
             
             <section class="page-overview">
@@ -405,17 +405,17 @@ function loadMinistryWebsite() {
             <section class="project-overview">
                 <h1>Ministry of Finance of the Republic of Macedonia - Website Development</h1>
                 <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/ministry-of-finance-mk"><i class="fab fa-github"></i> View source on GitHub</a></p>
-                <p>I designed and developed a fully responsive website for the Ministry of Finance of the Republic of Macedonia, leveraging React for the frontend and Firebase for hosting and authentication. The website offers a comprehensive user experience with multilingual support (Macedonian and English), enabling users to easily access critical information about the ministry, including news, services, and job opportunities.</p>
+                <p>A student project: a responsive website for the Ministry of Finance of the Republic of Macedonia, built with React and hosted on Firebase. It is available in Macedonian and English and covers the ministry's news, services and job openings.</p>
                 <img src="images/projects/ministry/ministry1.png" alt="">
                 <h2>Key Features</h2>
                 <ul>
-                    <li><strong>Fully Responsive Design:</strong> The website is designed to work seamlessly across devices of all sizes, ensuring an optimal experience for users on mobile, tablet, and desktop.</li>
+                    <li><strong>Responsive Design:</strong> The layout adapts to mobile, tablet and desktop screens.</li>
                     <li><strong>Multilingual Support:</strong> The website supports both Macedonian and English, allowing users to switch languages for a more inclusive experience.</li>
                     <li><strong>Firebase Authentication:</strong> Users can sign up, sign in, and manage their profiles securely, utilizing Firebase Authentication for a smooth login experience.</li>
                     <li><strong>Dynamic Job Listings:</strong> Authenticated users have the ability to add new job listings and view listings posted by others, streamlining the process of job application and recruitment.</li>
                     <li><strong>Data Management with Firebase:</strong> The website integrates with Firebase for data storage and real-time updates, ensuring job listings and news content are consistently up-to-date.</li>
                 </ul>
-                <p>This project demonstrates my ability to implement full-stack solutions using modern web technologies, including React, Firebase, and responsive design principles. The integration of authentication and dynamic content showcases my expertise in creating interactive and scalable applications.</p>
+                <p>Firebase handles authentication and stores the job listings, so changes appear for all users in real time.</p>
             </section>
             
             <section class="page-overview">
@@ -423,7 +423,7 @@ function loadMinistryWebsite() {
                 <div class="page">
                     <h3>Home Page</h3>
                     <img src="images/projects/ministry/m1.png" alt="Home Page Screenshot" class="page-image">
-                    <p>The Home page provides a comprehensive introduction to the Ministry of Finance of the Republic of Macedonia. It features essential information about the ministry, including its mission, vision, and services. The page is designed to engage users with quick access to key resources and the latest news.</p>
+                    <p>The Home page introduces the ministry, its mission, vision and services, with quick links to key resources and the latest news.</p>
                 </div>
                 <div class="page">
                     <h3>News Page</h3>
@@ -438,7 +438,7 @@ function loadMinistryWebsite() {
                 <div class="page">
                     <h3>Job Listings Page</h3>
                     <img src="images/projects/ministry/ministry4.png" alt="Job Listings Page Screenshot" class="page-image">
-                    <p>The Job Listings page showcases available job opportunities within the Ministry of Finance. Authenticated users can view, add, and manage job listings, streamlining the recruitment process. The integration of Firebase ensures real-time updates to the job listings.</p>
+                    <p>The Job Listings page shows open positions at the Ministry of Finance. Authenticated users can view, add, and manage job listings, streamlining the recruitment process. The integration of Firebase ensures real-time updates to the job listings.</p>
                 </div>
                 <div class="page">
                     <h3>Login Page</h3>
@@ -471,7 +471,7 @@ function loadAIResumePlatform() {
                     <li><strong>Career Coaching:</strong> Personalized career path recommendations and skills development guidance.</li>
                     <li><strong>Interview Preparation:</strong> Auto-generated technical and behavioral interview questions tailored to your profile.</li>
                 </ul>
-                <p>This project demonstrates AI API integration, NLP techniques, PDF parsing with PyPDF2, and building deployed Streamlit applications with resource management and rate limiting.</p>
+                <p>Resumes are parsed from PDF with PyPDF2, and the app limits request rates to stay within the Groq API's free tier.</p>
             </section>
             
             <section class="page-overview">
@@ -479,7 +479,7 @@ function loadAIResumePlatform() {
                 <div class="page">
                     <h3>AI-Powered Match Score & Analysis</h3>
                     <img src="images/projects/AI_Resume_Platform/3.png" alt="Match Score Results" class="page-image" style="width:50%; height:40%;">
-                    <p>Comprehensive match score with detailed AI feedback on strengths, weaknesses, and specific optimization recommendations.</p>
+                    <p>A match score with AI feedback on strengths, weaknesses, and specific optimization recommendations.</p>
                 </div>
                 <div class="page">
                     <h3>Keyword Analysis</h3>
@@ -529,19 +529,17 @@ function loadTeamToDo() {
             <section class="project-overview">
                 <h1>Team ToDo - Task Management Solution</h1>
                 <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Team-ToDo"><i class="fab fa-github"></i> View source on GitHub</a></p>
-                <p>I developed a robust Team ToDo application using C# .NET Framework to streamline task management for teams. This project combines a user-friendly interface with powerful backend functionality, enabling efficient collaboration and task tracking in a professional environment.</p>
+                <p>A task management app for teams, built with C# and .NET Framework. Tasks are created, assigned and tracked according to each user's role.</p>
                 <img src="images/projects/Team%20Todo/3.png" alt="Team ToDo Main Interface">
                 <h2>Key Features</h2>
                 <ul>
                     <li><strong>Task Management:</strong> Allows users to create, assign, and track tasks with customizable priorities and deadlines.</li>
                     <li><strong>User Authentication:</strong> Secure login system to ensure only authorized team members access the app.</li>
-                    <li><strong>Real-Time Updates:</strong> Dynamic task status updates for seamless team coordination.</li>
-                    <li><strong>Admin Dashboard:</strong> Comprehensive statistics and user management for administrators.</li>
+                    <li><strong>Status Updates:</strong> Task status changes are visible to the whole team.</li>
+                    <li><strong>Admin Dashboard:</strong> Statistics and user management for administrators.</li>
                 </ul>
-                <p>This project highlights my skills in full-stack development, including C# .NET, database design, and UI/UX implementation. 
-                There is multilevel hierarchy authorization and each role can do different things, such as task creation for employees, team management and task delegation for team leaders, and full administrative control for admins. 
-                Also I have implemented Datatables to offer more options for tasks like searching, pagination, sorting and filtering the number of tasks in each page.
-                It demonstrates my ability to build practical, scalable solutions for team productivity.</p>
+                <p>There is multilevel hierarchy authorization and each role can do different things, such as task creation for employees, team management and task delegation for team leaders, and full administrative control for admins. 
+                Also I have implemented Datatables to offer more options for tasks like searching, pagination, sorting and filtering the number of tasks in each page.</p>
             </section>
             
             <section class="page-overview">
@@ -588,7 +586,7 @@ function loadQuizWebsite() {
             <section class="project-overview">
                 <h1>Educational Quiz - Interactive Learning Platform</h1>
                 <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/Edukativen-Kviz"><i class="fab fa-github"></i> View source on GitHub</a></p>
-                <p>I designed and developed an interactive and engaging educational quiz application, aimed at providing users with a fun and effective way to test their knowledge. The project is built using modern web technologies to ensure a seamless user experience with a dynamic and visually appealing interface.</p>
+                <p>A quiz app for natural science subjects, built with JavaScript, HTML and CSS. Each quiz has 20 questions on the chosen subject, and the user can review the answers at the end.</p>
                 <img src="images/projects/quiz/q1.png" alt="Quiz Image">
                 <h2>Key Features</h2>
                 <ul>
@@ -598,7 +596,6 @@ function loadQuizWebsite() {
                     <li><strong>Category-Based Questions:</strong> Users can select from different categories, making it a customizable learning tool.</li>
                     <li><strong>Responsive Design:</strong> Optimized for all devices, ensuring smooth usability on desktop, tablet, and mobile screens.</li>
                 </ul>
-                <p>This project showcases my ability to create interactive and engaging web applications using JavaScript, HTML, and CSS. The quiz functionality, along with a visually appealing design, demonstrates my expertise in front-end development and user experience design.</p>
             </section>
             
             <section class="page-overview">
@@ -689,19 +686,19 @@ function loadCryptoAnalysis() {
             <section class="project-overview">
                 <h1>CryptoAnalysis Platform</h1>
                 <p><a class="githubLink" target="_blank" href="https://github.com/spasovskibojan/CryptoAnalysis"><i class="fab fa-github"></i> View source on GitHub</a></p>
-                <p>I designed and developed a deployed cryptocurrency market intelligence platform that combines technical analysis, fundamental analysis, and machine learning to provide comprehensive market insights. Built with a microservices architecture, this full-stack application demonstrates advanced software engineering practices including distributed systems design, AI/ML integration, and intelligent cloud resource management.</p>
+                <p>A cryptocurrency market dashboard that combines technical analysis, fundamental analysis and machine learning. It is split into a Django web app and two FastAPI microservices, and runs entirely on free cloud tiers.</p>
                 <img src="images/projects/crypto/1.png" alt="CryptoAnalysis Main Interface">
                 <h2>Key Features</h2>
                 <ul>
                     <li><strong>Real-Time Market Tracking:</strong> Monitor 10+ major cryptocurrencies with live price updates, interactive Chart.js visualizations, and historical data across multiple timeframes (1-minute to daily candles).</li>
-                    <li><strong>Advanced Technical Analysis:</strong> Implements 9 technical indicators including SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic Oscillator, Volume Analysis, and ADX for comprehensive market trend analysis.</li>
+                    <li><strong>Technical Analysis:</strong> Implements 9 technical indicators including SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic Oscillator, Volume Analysis, and ADX.</li>
                     <li><strong>AI-Powered Predictions:</strong> LSTM neural network trained on historical market data provides time-series price predictions, deployed on HuggingFace Spaces for scalable inference.</li>
                     <li><strong>Sentiment Analysis:</strong> Aggregates latest cryptocurrency news with VADER NLP sentiment scoring to gauge market sentiment and potential price movements.</li>
                     <li><strong>On-Chain Metrics:</strong> Displays blockchain fundamentals including hash rates, transaction volumes, market dominance, NVT ratios, DeFi TVL, and whale activity patterns via multiple API integrations.</li>
-                    <li><strong>Microservices Architecture:</strong> Distributed system with Django web app, two FastAPI microservices for technical/fundamental analysis, and intelligent service orchestration.</li>
-                    <li><strong>Reliability:</strong> Implements graceful degradation, automated service wake-up with health checks, concurrent request handling, and comprehensive fallback mechanisms for API rate limits.</li>
+                    <li><strong>Microservices Architecture:</strong> Distributed system with Django web app, two FastAPI microservices for technical/fundamental analysis, and a web app that wakes the services when they are needed.</li>
+                    <li><strong>Reliability:</strong> Implements graceful degradation, automated service wake-up with health checks, concurrent request handling, and fallbacks when external APIs hit rate limits.</li>
                 </ul>
-                <p>This project showcases my ability to architect complex, scalable systems while operating within budget constraints—achieving enterprise-level functionality using only free-tier cloud resources through intelligent design patterns. The integration of machine learning, NLP, and distributed systems highlights my cross-domain expertise.</p>
+                <p>The main constraint was cost: everything runs on free tiers, so the services sleep when idle and the web app wakes them on demand, with fallbacks while they start.</p>
             </section>
             
             <section class="page-overview">
@@ -714,7 +711,7 @@ function loadCryptoAnalysis() {
                 <div class="page">
                     <h3>Technical Analysis & Indicators</h3>
                     <img src="images/projects/crypto/3.png" alt="Technical Analysis" class="page-image">
-                    <p>Comprehensive technical analysis featuring 9 industry-standard indicators.</p>
+                    <p>Technical analysis with 9 standard indicators.</p>
                 </div>
                 <div class="page">
                     <h3>AI Price Predictions</h3>
@@ -724,7 +721,7 @@ function loadCryptoAnalysis() {
                 <div class="page">
                     <h3>Fundamental Analysis & Sentiment</h3>
                     <img src="images/projects/crypto/5.png" alt="Fundamental Analysis" class="page-image">
-                    <p>Aggregates news sentiment using VADER NLP, on-chain metrics like transaction volumes and hash rates, DeFi TVL data, and exchange flow analysis to provide comprehensive fundamental insights beyond just price action.</p>
+                    <p>Aggregates news sentiment using VADER NLP, on-chain metrics like transaction volumes and hash rates, DeFi TVL data, and exchange flow analysis to show fundamentals beyond the price chart.</p>
                 </div>
                 
                 <div class="code-look page">
@@ -737,11 +734,6 @@ function loadCryptoAnalysis() {
                         <li><strong>Deployment:</strong> Render (Django + FastAPI services), HuggingFace Spaces (LSTM model)</li>
                         <li><strong>Advanced Features:</strong> Concurrent request handling with ThreadPoolExecutor, automated service orchestration, graceful degradation patterns</li>
                     </ul>
-                    <a target="_blank" href="https://cryptoanalysis-web.onrender.com/">Live Demo of the project</a>
-                    <div class="deployment-notice">
-                        <i class="fas fa-info-circle"></i>
-                        <strong>Note:</strong> First load may take 1-2 minutes as microservices initialize. The app automatically wakes dormant services.
-                    </div>
                 </div>
             </section>
         </div>
